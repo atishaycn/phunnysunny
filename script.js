@@ -35,6 +35,37 @@
     ease: "elastic.out(1, 0.72)"
   });
 
+  gsap.fromTo(".real-ones-feature", {
+    y: 48,
+    opacity: 0.34
+  }, {
+    y: 0,
+    opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".real-ones-feature",
+      start: "top 82%",
+      end: "top 38%",
+      scrub: true
+    }
+  });
+
+  gsap.fromTo(".phone-shot", {
+    y: 42,
+    opacity: 0.55
+  }, {
+    y: 0,
+    opacity: 1,
+    stagger: 0.08,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".phone-strip",
+      start: "top 86%",
+      end: "bottom 42%",
+      scrub: true
+    }
+  });
+
   gsap.utils.toArray(".project-card").forEach((card) => {
     gsap.fromTo(card, {
       scale: 0.92,
