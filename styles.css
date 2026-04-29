@@ -93,6 +93,7 @@ a {
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
