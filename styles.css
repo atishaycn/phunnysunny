@@ -552,6 +552,18 @@ h1 {
   background-blend-mode: multiply;
 }
 
+.project-card.game-card {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(249, 206, 74, 0.78), transparent 10rem),
+    radial-gradient(circle at 18% 82%, rgba(132, 214, 180, 0.46), transparent 12rem),
+    linear-gradient(135deg, rgba(18, 17, 15, 0.94), rgba(236, 91, 63, 0.76)),
+    url("https://game.phunnysunny.com/assets/player.svg");
+  background-size: auto, auto, auto, 160px auto;
+  background-position: center, center, center, right 26px bottom 22px;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, normal, normal;
+}
+
 .project-card.launched span {
   color: rgba(255, 250, 240, 0.78);
 }
