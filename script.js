@@ -22,19 +22,6 @@
     ease: "power3.out"
   });
 
-  gsap.fromTo(".confetti-field span", {
-    y: -18,
-    rotate: -18,
-    opacity: 0
-  }, {
-    y: 24,
-    rotate: 18,
-    opacity: 0.76,
-    duration: 1.1,
-    stagger: 0.08,
-    ease: "power2.out"
-  });
-
   gsap.fromTo(".hero-card", {
     scale: 0.86,
     opacity: 0.4,
@@ -48,29 +35,15 @@
     ease: "elastic.out(1, 0.72)"
   });
 
-  gsap.fromTo(".place-card", {
-    y: 16,
-    rotate: -8,
-    opacity: 0
-  }, {
-    y: 0,
-    rotate: -3,
-    opacity: 1,
-    duration: 0.9,
-    delay: 0.34,
-    ease: "power3.out"
-  });
-
-  gsap.fromTo(".featured-launch", {
+  gsap.fromTo(".real-ones-feature", {
     y: 48,
     opacity: 0.34
   }, {
     y: 0,
     opacity: 1,
-    stagger: 0.1,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".launch-showcase",
+      trigger: ".real-ones-feature",
       start: "top 82%",
       end: "top 38%",
       scrub: true
@@ -105,23 +78,6 @@
         trigger: card,
         start: "top 92%",
         end: "bottom 28%",
-        scrub: true
-      }
-    });
-  });
-
-  gsap.utils.toArray(".panel, .phone-shot, .game-preview, .project-card").forEach((item) => {
-    gsap.fromTo(item, {
-      filter: "brightness(0.82)",
-      opacity: 0.48
-    }, {
-      filter: "brightness(1)",
-      opacity: 1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: item,
-        start: "top 92%",
-        end: "center 48%",
         scrub: true
       }
     });
