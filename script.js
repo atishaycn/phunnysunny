@@ -35,7 +35,7 @@
     ease: "elastic.out(1, 0.72)"
   });
 
-  gsap.fromTo(".real-ones-feature", {
+  gsap.fromTo(".launch-feature", {
     y: 48,
     opacity: 0.34
   }, {
@@ -43,14 +43,14 @@
     opacity: 1,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".real-ones-feature",
+      trigger: ".launch-showcase",
       start: "top 82%",
       end: "top 38%",
       scrub: true
     }
   });
 
-  gsap.fromTo(".phone-shot", {
+  gsap.fromTo(".phone-shot, .game-asset", {
     y: 42,
     opacity: 0.55
   }, {
@@ -59,7 +59,7 @@
     stagger: 0.08,
     ease: "none",
     scrollTrigger: {
-      trigger: ".phone-strip",
+      trigger: ".launch-showcase",
       start: "top 86%",
       end: "bottom 42%",
       scrub: true
