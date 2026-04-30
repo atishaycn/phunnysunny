@@ -19,4 +19,4 @@
 
 ## Current brief
 
-Keep this as a simple, fun bio page with a complete `/Users/sa/Developer` project list and one short sentence per project. Real Ones is the launched-app highlight and should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `cGame` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should sit beside Real Ones as a launched project card. Prefer small static changes unless the site needs a real build pipeline.
+Keep this as a simple, fun bio page with a complete `/Users/sa/Developer` project list and one short sentence per project. Real Ones is the launched-app highlight and should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `game2` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should sit beside Real Ones as a launched project card. Prefer small static changes unless the site needs a real build pipeline.
