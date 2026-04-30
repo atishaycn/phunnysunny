@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A simple, fun bio page and project map for phunnysunny.">
+    <meta name="description" content="A birthday-party-bright bio page and project map for phunnysunny.">
     <title>phunnysunny</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,7 @@
         <a class="brand" href="#top" aria-label="phunnysunny home">phunnysunny</a>
         <div class="nav-links">
           <a href="#real-ones">Real Ones</a>
+          <a href="#bug-blaster">Game</a>
           <a href="https://skills.phunnysunny.com/">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#vibe">Vibe</a>
@@ -25,72 +26,104 @@
       </nav>
 
       <section class="hero" id="top">
+        <div class="confetti-field" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
         <div class="hero-copy">
-          <p class="kicker">small tools, bright loops, real shipping energy</p>
-          <h1>I make playful <span class="inline-photo" aria-hidden="true"></span> internet things that keep moving.</h1>
-          <p class="hero-text">A sunny corner for experiments, agents, cameras, friend graphs, event helpers, and tiny systems that turn half-ideas into working surfaces.</p>
+          <p class="kicker">the good table is already set</p>
+          <h1>A birthday party <span class="inline-photo" aria-hidden="true"></span> for useful internet things.</h1>
+          <p class="hero-text">This is phunnysunny as a considered celebration: bright enough to feel alive, organized enough that every project has a place card, and calm enough that the work still reads.</p>
           <div class="hero-actions">
             <a class="button button-light" href="#projects">Browse projects</a>
             <a class="button button-dark" href="https://github.com/atishaycn">GitHub</a>
             <a class="button button-ghost" href="https://x.com/phunnysunny">X</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="Abstract studio image">
+        <div class="hero-art" aria-label="Birthday table still life">
           <div class="hero-card hero-card-main"></div>
           <div class="hero-card hero-card-small"></div>
+          <div class="place-card">projects served warm</div>
         </div>
       </section>
 
-      <section class="real-ones-feature" id="real-ones">
-        <div class="real-ones-copy">
-          <div class="launch-row">
-            <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/92/2e/c8922ec8-e79e-b243-3040-f633134ad827/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/256x256bb.png" alt="Real Ones app icon">
-            <span>Launched on the App Store</span>
+      <section class="launch-showcase" aria-label="Featured launches">
+        <article class="featured-launch real-ones-feature" id="real-ones">
+          <div class="featured-copy">
+            <div class="launch-row">
+              <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/92/2e/c8922ec8-e79e-b243-3040-f633134ad827/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/256x256bb.png" alt="Real Ones app icon">
+              <span>Launched on the App Store</span>
+            </div>
+            <h2>Real Ones is the thoughtful host for your closest people.</h2>
+            <p>Track the friends who matter, remember birthdays and important dates, save message ideas, and schedule thoughtful check-ins through iMessage or WhatsApp. Your data stays offline on your phone, with nothing synced to the cloud.</p>
+            <div class="featured-actions">
+              <a class="button button-light" href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
+            </div>
+            <div class="app-facts" aria-label="Real Ones details">
+              <span>Free iPhone app</span>
+              <span>iOS 18+</span>
+              <span>Offline-only data</span>
+              <span>Nothing synced to cloud</span>
+            </div>
           </div>
-          <h2>Real Ones helps you keep your closest people close.</h2>
-          <p>Track the friends who matter, remember birthdays and important dates, save message ideas, and schedule thoughtful check-ins through iMessage or WhatsApp. Your data stays offline on your phone, with nothing synced to the cloud.</p>
-          <div class="real-ones-actions">
-            <a class="button button-light" href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
+          <div class="phone-strip" aria-label="Real Ones app screenshots">
+            <img class="phone-shot shot-one" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen">
+            <img class="phone-shot shot-two" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen">
+            <img class="phone-shot shot-three" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen">
           </div>
-          <div class="app-facts" aria-label="Real Ones details">
-            <span>Free iPhone app</span>
-            <span>iOS 18+</span>
-            <span>Offline-only data</span>
-            <span>Nothing synced to cloud</span>
+        </article>
+
+        <article class="featured-launch game-feature" id="bug-blaster">
+          <div class="featured-copy">
+            <div class="launch-row">
+              <span class="game-icon" aria-hidden="true">BB</span>
+              <span>Live browser game</span>
+            </div>
+            <h2>Bug Blaster is a tiny arcade table with loud little bugs.</h2>
+            <p>Jump, auto-fire, grab power-ups, dodge hurdles, survive Collector bosses, and chase the top 10 in a fast Canvas runner built from the cGame project.</p>
+            <div class="featured-actions">
+              <a class="button button-light" href="https://game.phunnysunny.com/">Play Bug Blaster</a>
+            </div>
+            <div class="app-facts" aria-label="Bug Blaster details">
+              <span>Canvas arcade</span>
+              <span>Auto-fire runner</span>
+              <span>Power-ups</span>
+              <span>Top-10 scores</span>
+            </div>
           </div>
-        </div>
-        <div class="phone-strip" aria-label="Real Ones app screenshots">
-          <img class="phone-shot shot-one" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen">
-          <img class="phone-shot shot-two" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen">
-          <img class="phone-shot shot-three" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen">
-        </div>
+          <a class="game-preview" href="https://game.phunnysunny.com/" aria-label="Play Bug Blaster">
+            <img class="game-screen" src="assets/cgame/bug-blaster-game-over.png" alt="Bug Blaster game screenshot">
+            <img class="sprite sprite-player" src="assets/cgame/player.svg" alt="">
+            <img class="sprite sprite-bug" src="assets/cgame/bug-flying.svg" alt="">
+            <img class="sprite sprite-boss" src="assets/cgame/collector.svg" alt="">
+          </a>
+        </article>
       </section>
 
       <section class="marquee-wrap" aria-label="Project themes">
         <div class="marquee">
-          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span>
-          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span>
+          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span><span>birthday memory</span>
+          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span><span>birthday memory</span>
         </div>
       </section>
 
       <section class="intro-grid" id="vibe">
         <article class="panel panel-wide">
-          <h2>Built like a notebook, shipped like a playground.</h2>
+          <h2>Every project gets a seat, a glass, and a reason to be here.</h2>
           <p>Some repos are polished apps, some are sketchpads, and some are infrastructure experiments. The common thread is simple: make the idea visible fast, then keep the useful parts alive.</p>
         </article>
         <article class="panel">
           <h3>Current shape</h3>
-          <p>Local-first prototypes, web surfaces, agent workflows, and practical tools.</p>
+          <p>Local-first prototypes, web surfaces, agent workflows, and practical tools arranged like a well-run party.</p>
         </article>
         <article class="panel panel-dark">
           <h3>Operating mood</h3>
-          <p>Bright, compact, useful, and never too precious to change.</p>
+          <p>Festive, precise, useful, and never too precious to change.</p>
         </article>
       </section>
 
       <section class="project-section" id="projects">
         <div class="section-head">
-          <h2>Everything in Developer.</h2>
+          <h2>Everything in Developer, laid out like place settings.</h2>
           <p>A quick index of the local project folders on this machine.</p>
         </div>
         <div class="project-grid">
@@ -105,6 +138,7 @@
           <a class="project-card" href="https://github.com/atishaycn/amazingcam"><strong>amazingcam</strong><span>A camera prototype exploring capture, preview, and playful utility.</span></a>
           <a class="project-card" href="https://github.com/atishaycn/bestcam"><strong>bestcam</strong><span>A camera app sketch focused on fast, simple capture flow.</span></a>
           <a class="project-card wide" href="https://github.com/atishaycn/c_and_s"><strong>c_and_s</strong><span>A wedding website with a warm public-facing presentation.</span></a>
+          <a class="project-card launched game-launched" href="https://game.phunnysunny.com/"><strong>cGame</strong><span>Bug Blaster, a live Canvas arcade runner with bugs, bosses, power-ups, and top-10 scores.</span></a>
           <a class="project-card" href="https://github.com/financialvice/chatfaucet"><strong>chatfaucet</strong><span>A chat faucet project for routing and testing conversational access.</span></a>
           <a class="project-card" href="https://github.com/atishaycn/creator-pipeline-factory"><strong>creator-pipeline-factory</strong><span>A factory for assembling creator content workflows.</span></a>
           <a class="project-card" href="https://github.com/atishaycn/cursorcam"><strong>cursorcam</strong><span>A camera-flavored experiment tied to cursor or desktop capture ideas.</span></a>
@@ -147,20 +181,20 @@
 
       <section class="motion-story">
         <div class="sticky-title">
-          <h2>Loose sketches, useful systems.</h2>
-          <p>Swipe the stack with your scroll: local projects become small postcards instead of a dusty folder list.</p>
+          <h2>The party keeps moving without losing the plot.</h2>
+          <p>Scroll through the stack: local projects become composed postcards instead of a dusty folder list.</p>
         </div>
         <div class="stack-cards" aria-label="Project mood cards">
-          <article class="stack-card"><span>01</span><strong>Capture</strong><p>Camera experiments for quick visual loops.</p></article>
-          <article class="stack-card"><span>02</span><strong>Connect</strong><p>Friend graphs and social data tools.</p></article>
-          <article class="stack-card"><span>03</span><strong>Scout</strong><p>Kids events and weekend discovery surfaces.</p></article>
-          <article class="stack-card"><span>04</span><strong>Automate</strong><p>Agents, guardrails, pipelines, and hosted skills.</p></article>
+          <article class="stack-card"><strong>Capture</strong><p>Camera experiments for quick visual loops.</p></article>
+          <article class="stack-card"><strong>Connect</strong><p>Friend graphs and social data tools.</p></article>
+          <article class="stack-card"><strong>Scout</strong><p>Kids events and weekend discovery surfaces.</p></article>
+          <article class="stack-card"><strong>Automate</strong><p>Agents, guardrails, pipelines, and hosted skills.</p></article>
         </div>
       </section>
 
       <footer class="footer" id="contact">
-        <h2>Keep the tab sunny.</h2>
-        <p>Personal experiments, small systems, and shipped proofs of work.</p>
+        <h2>Leave with a favor, not a flyer.</h2>
+        <p>Personal experiments, small systems, and shipped proofs of work, hosted with a little ceremony.</p>
         <div class="footer-links">
           <a href="https://github.com/atishaycn">GitHub</a>
           <a href="https://x.com/phunnysunny">X</a>

@@ -19,4 +19,4 @@
 
 ## Current brief
 
-Keep this as a simple, fun bio page with a complete `/Users/sa/Developer` project list and one short sentence per project. Real Ones is the launched-app highlight and should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. Prefer small static changes unless the site needs a real build pipeline.
+Keep this as a simple, fun bio page with a complete `/Users/sa/Developer` project list and one short sentence per project. Real Ones and Bug Blaster are the featured launch highlights; keep Real Ones aligned with its App Store link/assets and Bug Blaster aligned with the local `cGame` repo plus `https://game.phunnysunny.com/`. Prefer small static changes unless the site needs a real build pipeline.
