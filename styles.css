@@ -582,6 +582,11 @@ h1 {
 }
 
 .project-card {
+  --card-a: #f9ce4a;
+  --card-b: #84d6b4;
+  --card-ink: #12110f;
+  --card-paper: rgba(255, 250, 237, 0.78);
+  --card-pattern: radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.55) 0 0.45rem, transparent 0.5rem);
   position: relative;
   min-height: 188px;
   display: flex;
@@ -591,8 +596,12 @@ h1 {
   padding: 20px;
   border: 1px solid rgba(18, 17, 15, 0.18);
   border-radius: 8px;
-  color: var(--ink);
-  background: rgba(255, 250, 237, 0.72);
+  color: var(--card-ink);
+  background:
+    var(--card-pattern),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), var(--card-paper)),
+    linear-gradient(135deg, color-mix(in srgb, var(--card-a), transparent 22%), color-mix(in srgb, var(--card-b), transparent 26%));
+  background-size: 92px 92px, auto, auto;
   box-shadow: 0 14px 42px rgba(58, 35, 12, 0.1);
   transition: transform 260ms ease, background 260ms ease, box-shadow 260ms ease;
 }
@@ -602,13 +611,42 @@ h1 {
   position: absolute;
   inset: auto -20% -52% -20%;
   height: 120px;
-  background: linear-gradient(90deg, var(--sun), var(--mint), var(--tomato), var(--blue));
-  opacity: 0.18;
+  background:
+    linear-gradient(90deg, var(--card-a), var(--card-b)),
+    repeating-linear-gradient(90deg, transparent 0 12px, rgba(255, 255, 255, 0.55) 12px 18px);
+  background-blend-mode: normal, overlay;
+  opacity: 0.28;
   transition: transform 700ms ease, opacity 260ms ease;
 }
 
+.project-card::after {
+  content: attr(data-icon);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--card-ink), transparent 68%);
+  border-radius: 16px;
+  color: var(--card-ink);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.18)),
+    linear-gradient(135deg, var(--card-a), var(--card-b));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.38), 0 14px 24px rgba(18, 17, 15, 0.14);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
 .project-card:hover {
-  background: #fffdf4;
+  background:
+    var(--card-pattern),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), var(--card-paper)),
+    linear-gradient(135deg, color-mix(in srgb, var(--card-a), transparent 10%), color-mix(in srgb, var(--card-b), transparent 14%));
+  background-size: 92px 92px, auto, auto;
   box-shadow: 0 24px 74px rgba(58, 35, 12, 0.2);
 }
 
@@ -624,6 +662,7 @@ h1 {
 }
 
 .project-card strong {
+  max-width: calc(100% - 66px);
   overflow-wrap: anywhere;
   font-size: 1.15rem;
   line-height: 1.05;
@@ -642,41 +681,224 @@ h1 {
   grid-row: span 2;
   min-height: 388px;
   background:
-    linear-gradient(180deg, rgba(255, 250, 237, 0.82), rgba(255, 250, 237, 0.68)),
-    url("https://picsum.photos/seed/phunnysunny-card/620/820");
-  background-size: cover;
+    var(--card-pattern),
+    radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--card-a), transparent 16%), transparent 13rem),
+    radial-gradient(circle at 16% 82%, color-mix(in srgb, var(--card-b), transparent 20%), transparent 14rem),
+    linear-gradient(155deg, rgba(255, 250, 237, 0.88), rgba(255, 250, 237, 0.62));
+  background-size: 120px 120px, auto, auto, auto;
 }
 
 .project-card.launched {
+  --card-ink: #fffaf0;
   grid-column: span 2;
   min-height: 260px;
   color: #fffaf0;
   background:
+    var(--card-pattern),
     linear-gradient(135deg, rgba(18, 17, 15, 0.94), rgba(61, 119, 196, 0.82)),
     url("https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ba/db/8f/badb8f99-04b2-6d61-876f-593a9c55b78e/Placeholder.mill/1200x630wa.jpg");
-  background-size: cover;
+  background-size: 110px 110px, auto, cover;
   background-position: center;
   background-blend-mode: multiply;
 }
 
 .project-card.game-card {
   background:
+    var(--card-pattern),
     radial-gradient(circle at 80% 18%, rgba(249, 206, 74, 0.78), transparent 10rem),
     radial-gradient(circle at 18% 82%, rgba(132, 214, 180, 0.46), transparent 12rem),
     linear-gradient(135deg, rgba(18, 17, 15, 0.94), rgba(236, 91, 63, 0.76)),
     url("https://game.phunnysunny.com/assets/player.svg");
-  background-size: auto, auto, auto, 160px auto;
+  background-size: 120px 120px, auto, auto, auto, 160px auto;
   background-position: center, center, center, right 26px bottom 22px;
   background-repeat: no-repeat;
-  background-blend-mode: screen, screen, normal, normal;
+  background-blend-mode: soft-light, screen, screen, normal, normal;
 }
 
 .project-card.launched span {
   color: rgba(255, 250, 240, 0.78);
 }
 
+.project-card.launched::after {
+  color: #12110f;
+}
+
 .project-card.launched::before {
   opacity: 0.42;
+}
+
+.project-card[data-project="55cam"] {
+  --card-a: #ff6f59;
+  --card-b: #ffd166;
+  --card-pattern: linear-gradient(135deg, rgba(18, 17, 15, 0.09) 0 10%, transparent 10% 50%, rgba(18, 17, 15, 0.09) 50% 60%, transparent 60%);
+}
+
+.project-card[data-project="localx"] {
+  --card-a: #111111;
+  --card-b: #6ee7f9;
+  --card-ink: #f8fbff;
+  --card-paper: rgba(27, 32, 39, 0.76);
+  --card-pattern: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 13px);
+}
+
+.project-card[data-project="agent-content-pipeline"] {
+  --card-a: #2dd4bf;
+  --card-b: #facc15;
+  --card-pattern: repeating-linear-gradient(90deg, rgba(18, 17, 15, 0.08) 0 6px, transparent 6px 18px);
+}
+
+.project-card[data-project="agent-guardrails-runner"] {
+  --card-a: #ef4444;
+  --card-b: #111827;
+  --card-ink: #fffaf0;
+  --card-paper: rgba(35, 24, 24, 0.72);
+  --card-pattern: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.12) 0 7px, transparent 7px 16px);
+}
+
+.project-card[data-project="agent-native-mac-app-lab"] {
+  --card-a: #a7f3d0;
+  --card-b: #60a5fa;
+  --card-pattern: radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.7) 0 0.55rem, transparent 0.6rem);
+}
+
+.project-card[data-project="bugblaster"] {
+  --card-a: #f97316;
+  --card-b: #84cc16;
+  --card-pattern: radial-gradient(circle at 24% 24%, rgba(18, 17, 15, 0.12) 0 0.42rem, transparent 0.46rem);
+}
+
+.project-card[data-project="c-and-s"] {
+  --card-a: #f9a8d4;
+  --card-b: #fde68a;
+  --card-pattern: radial-gradient(ellipse at 30% 24%, rgba(255, 255, 255, 0.62) 0 0.5rem, transparent 0.56rem);
+}
+
+.project-card[data-project="chatfaucet"] {
+  --card-a: #38bdf8;
+  --card-b: #6366f1;
+  --card-pattern: repeating-radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.26) 0 2px, transparent 2px 12px);
+}
+
+.project-card[data-project="creator-pipeline-factory"] {
+  --card-a: #fb923c;
+  --card-b: #14b8a6;
+  --card-pattern: linear-gradient(90deg, rgba(18, 17, 15, 0.08) 1px, transparent 1px), linear-gradient(0deg, rgba(18, 17, 15, 0.08) 1px, transparent 1px);
+}
+
+.project-card[data-project="findFriends"] {
+  --card-a: #f472b6;
+  --card-b: #818cf8;
+  --card-pattern: radial-gradient(circle at 24% 24%, rgba(18, 17, 15, 0.1) 0 0.4rem, transparent 0.46rem), radial-gradient(circle at 72% 64%, rgba(18, 17, 15, 0.1) 0 0.34rem, transparent 0.4rem);
+}
+
+.project-card[data-project="gymcheckin"] {
+  --card-a: #22c55e;
+  --card-b: #f43f5e;
+  --card-pattern: repeating-linear-gradient(90deg, rgba(18, 17, 15, 0.1) 0 2px, transparent 2px 20px);
+}
+
+.project-card[data-project="html-to-video-agent-studio"] {
+  --card-a: #06b6d4;
+  --card-b: #a855f7;
+  --card-pattern: linear-gradient(90deg, rgba(18, 17, 15, 0.1) 0 8%, transparent 8% 18%);
+}
+
+.project-card[data-project="knowledge-synced-agent-layer"] {
+  --card-a: #0f766e;
+  --card-b: #eab308;
+  --card-ink: #fffaf0;
+  --card-paper: rgba(19, 78, 74, 0.78);
+  --card-pattern: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.11) 0 1px, transparent 1px 9px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 17px);
+}
+
+.project-card[data-project="langAgent"] {
+  --card-a: #4ade80;
+  --card-b: #f59e0b;
+  --card-pattern: repeating-linear-gradient(135deg, rgba(18, 17, 15, 0.08) 0 4px, transparent 4px 20px);
+}
+
+.project-card[data-project="mostcam"] {
+  --card-a: #f97316;
+  --card-b: #fef08a;
+  --card-pattern: radial-gradient(circle at center, rgba(18, 17, 15, 0.08) 0 0.35rem, transparent 0.42rem);
+}
+
+.project-card[data-project="onecam"] {
+  --card-a: #111827;
+  --card-b: #fbbf24;
+  --card-ink: #fffaf0;
+  --card-paper: rgba(31, 41, 55, 0.74);
+  --card-pattern: conic-gradient(from 45deg, rgba(255, 255, 255, 0.12) 0 25%, transparent 25% 50%, rgba(255, 255, 255, 0.12) 50% 75%, transparent 75%);
+}
+
+.project-card[data-project="paperclip"] {
+  --card-a: #d1d5db;
+  --card-b: #fb7185;
+  --card-pattern: repeating-linear-gradient(45deg, rgba(18, 17, 15, 0.1) 0 2px, transparent 2px 14px);
+}
+
+.project-card[data-project="persistent-ops-thread"] {
+  --card-a: #1d4ed8;
+  --card-b: #facc15;
+  --card-ink: #fffaf0;
+  --card-paper: rgba(29, 78, 216, 0.72);
+  --card-pattern: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+.project-card[data-project="phunnysunny"] {
+  --card-a: #facc15;
+  --card-b: #fb7185;
+  --card-pattern: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.68) 0 0.7rem, transparent 0.74rem);
+}
+
+.project-card[data-project="pi-faucet"],
+.project-card[data-project="pi-mono"] {
+  --card-a: #7c3aed;
+  --card-b: #22d3ee;
+  --card-pattern: repeating-radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0 2px, transparent 2px 13px);
+}
+
+.project-card[data-project="pull-facebook-birthdays"] {
+  --card-a: #2563eb;
+  --card-b: #fb7185;
+  --card-pattern: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.42) 0 10px, transparent 10px 22px);
+}
+
+.project-card[data-project="readpalms"] {
+  --card-a: #c084fc;
+  --card-b: #fdba74;
+  --card-pattern: radial-gradient(ellipse at 50% 28%, rgba(18, 17, 15, 0.1) 0 0.42rem, transparent 0.5rem);
+}
+
+.project-card[data-project="real-ones"] {
+  --card-a: #f97316;
+  --card-b: #38bdf8;
+  --card-pattern: radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.2) 0 0.45rem, transparent 0.5rem);
+}
+
+.project-card[data-project="bug-blaster-web"] {
+  --card-a: #facc15;
+  --card-b: #22c55e;
+}
+
+.project-card[data-project="sims"] {
+  --card-a: #34d399;
+  --card-b: #f0abfc;
+  --card-pattern: radial-gradient(circle at 18% 18%, rgba(18, 17, 15, 0.1) 0 0.35rem, transparent 0.4rem), linear-gradient(45deg, transparent 0 46%, rgba(18, 17, 15, 0.08) 46% 54%, transparent 54%);
+}
+
+.project-card[data-project="skills-final"] {
+  --card-a: #0ea5e9;
+  --card-b: #f97316;
+  --card-pattern: linear-gradient(90deg, rgba(18, 17, 15, 0.09) 0 12%, transparent 12% 24%);
+}
+
+.project-card[data-project="vtechcs"] {
+  --card-a: #86198f;
+  --card-b: #f97316;
+  --card-ink: #fffaf0;
+  --card-paper: rgba(88, 28, 135, 0.7);
+  --card-pattern: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.13) 0 2px, transparent 2px 11px);
 }
 
 .motion-story {

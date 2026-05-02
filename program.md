@@ -7,7 +7,7 @@
 ## Important files
 
 - `index.html` contains the page structure and project data markup.
-- `styles.css` owns the visual system, responsive layout, and motion-ready states.
+- `styles.css` owns the visual system, responsive layout, motion-ready states, and per-project card themes/icons.
 - `script.js` adds GSAP-enhanced interactions with safe no-JS fallbacks.
 - `vercel.json` keeps the static deployment simple and domain-friendly.
 
@@ -19,4 +19,4 @@
 
 ## Current brief
 
-Keep this as a simple, fun bio page with a curated `/Users/sa/Developer` project list and one short sentence per retained project. Do not show every local folder: remove duplicate branch copies, temporary scratch builds, incomplete concept variants, and generic experiments unless the user asks for a full inventory. Real Ones and `game2` are the launched-project showcases and should sit beside each other near the top of the page. Real Ones should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `game2` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should use facts from `/Users/sa/Developer/game2`. Prefer small static changes unless the site needs a real build pipeline.
+Keep this as a simple, fun bio page with a curated `/Users/sa/Developer` project list and one short sentence per retained project. The curated grid is labeled "Ongoing experiments" and each retained project card should keep a distinct `data-project`, `data-icon`, color theme, and background motif in CSS. Do not show every local folder: remove duplicate branch copies, temporary scratch builds, incomplete concept variants, and generic experiments unless the user asks for a full inventory. Real Ones and `game2` are the launched-project showcases and should sit beside each other near the top of the page. Real Ones should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `game2` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should use facts from `/Users/sa/Developer/game2`. Prefer small static changes unless the site needs a real build pipeline.
