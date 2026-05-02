@@ -84,13 +84,17 @@
   });
 
   gsap.utils.toArray(".stack-card").forEach((card, index) => {
-    gsap.to(card, {
-      y: index * -18,
-      scale: 1 - index * 0.025,
+    gsap.fromTo(card, {
+      y: 36,
+      opacity: 0.42
+    }, {
+      y: 0,
+      opacity: 1,
+      delay: index * 0.04,
       scrollTrigger: {
         trigger: card,
-        start: "top 76%",
-        end: "bottom 24%",
+        start: "top 88%",
+        end: "top 52%",
         scrub: true
       }
     });
