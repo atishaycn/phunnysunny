@@ -1,5 +1,27 @@
 (function () {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const launchShowcase = document.querySelector(".launch-showcase");
+  const launchCards = launchShowcase ? Array.from(launchShowcase.querySelectorAll(".launch-feature")) : [];
+
+  if (launchShowcase && launchCards.length > 0) {
+    let activeSlide = 0;
+    const setActiveSlide = (index) => {
+      activeSlide = index % launchCards.length;
+      const cardStep = launchCards[0].getBoundingClientRect().width + 18;
+      launchShowcase.style.setProperty("--active-slide", activeSlide);
+      launchShowcase.style.setProperty("--slide-offset", `${activeSlide * cardStep}px`);
+      launchCards.forEach((card, cardIndex) => {
+        card.classList.toggle("is-active", cardIndex === activeSlide);
+      });
+    };
+
+    setActiveSlide(0);
+    window.addEventListener("resize", () => setActiveSlide(activeSlide));
+
+    if (!prefersReducedMotion && window.matchMedia("(min-width: 641px)").matches) {
+      window.setInterval(() => setActiveSlide(activeSlide + 1), 3200);
+    }
+  }
 
   if (!window.gsap || prefersReducedMotion) {
     return;
@@ -36,11 +58,9 @@
   });
 
   gsap.fromTo(".launch-feature", {
-    y: 48,
-    opacity: 0.34
+    y: 48
   }, {
     y: 0,
-    opacity: 1,
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".launch-showcase",

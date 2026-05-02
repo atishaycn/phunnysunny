@@ -41,8 +41,9 @@
         </div>
       </section>
 
-      <section class="launch-showcase" id="real-ones">
-        <article class="launch-feature real-ones-feature">
+      <section class="launch-showcase" id="real-ones" aria-label="Launched projects">
+        <div class="launch-track">
+          <article class="launch-feature real-ones-feature is-active">
           <div class="launch-copy">
             <div class="launch-row">
               <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/92/2e/c8922ec8-e79e-b243-3040-f633134ad827/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/256x256bb.png" alt="Real Ones app icon">
@@ -65,9 +66,57 @@
             <img class="phone-shot shot-two" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen">
             <img class="phone-shot shot-three" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen">
           </div>
-        </article>
+          </article>
 
-        <article class="launch-feature game-feature" id="bug-blaster">
+          <article class="launch-feature skills-feature" id="skills">
+            <div class="launch-copy">
+              <div class="launch-row">
+                <span class="app-icon skills-icon" aria-hidden="true">S</span>
+                <span>Hosted at skills.phunnysunny.com</span>
+              </div>
+              <h2>Skills is a public marketplace for agent-ready skills.</h2>
+              <p>Browse useful skill cards, copy install prompts, and submit GitHub repositories that auto-import metadata before backend validation.</p>
+              <div class="launch-actions">
+                <a class="button button-light" href="https://skills.phunnysunny.com/">Browse Skills</a>
+              </div>
+              <div class="app-facts" aria-label="Skills details">
+                <span>Skill cards</span>
+                <span>Install prompts</span>
+                <span>GitHub import</span>
+                <span>Public catalog</span>
+              </div>
+            </div>
+            <div class="skills-stage" aria-label="Skills catalog preview">
+              <div class="skills-mini-card">Frontend taste<span>Premium UI standards</span></div>
+              <div class="skills-mini-card">Agent tools<span>Copy-ready install prompts</span></div>
+              <div class="skills-mini-card">GitHub import<span>Metadata pulled from repos</span></div>
+            </div>
+          </article>
+
+          <article class="launch-feature pet-zoo-feature" id="pet-zoo">
+            <div class="launch-copy">
+              <div class="launch-row">
+                <img class="app-icon pet-zoo-icon" src="assets/pet-zoo-park.png" alt="Pet Zoo park">
+                <span>Hosted at petzoo.phunnysunny.com</span>
+              </div>
+              <h2>Pet Zoo lets Codex pets wander into a shared park.</h2>
+              <p>Bring Petdex-style Codex pets into a playful browser park, browse launch-safe shared pets, and open saved companions through shareable pet links.</p>
+              <div class="launch-actions">
+                <a class="button button-light" href="https://petzoo.phunnysunny.com/">Visit Pet Zoo</a>
+              </div>
+              <div class="app-facts" aria-label="Pet Zoo details">
+                <span>Codex pets</span>
+                <span>Shared park</span>
+                <span>Petdex packs</span>
+                <span>Share links</span>
+              </div>
+            </div>
+            <div class="pet-zoo-stage" aria-label="Pet Zoo park preview">
+              <img src="assets/pet-zoo-park.png" alt="">
+            </div>
+          </article>
+
+          <article class="launch-feature game-feature" id="bug-blaster">
           <div class="launch-copy">
             <div class="launch-row">
               <img class="app-icon game-icon" src="https://game.phunnysunny.com/assets/player.svg" alt="Bug Blaster player">
@@ -93,7 +142,8 @@
             <div class="game-beam" aria-hidden="true"></div>
             <div class="game-score" aria-hidden="true">TOP 10</div>
           </div>
-        </article>
+          </article>
+        </div>
       </section>
 
       <section class="marquee-wrap" aria-label="Project themes">
@@ -153,6 +203,8 @@
           <a class="project-card" data-project="pull-facebook-birthdays" data-icon="BD" href="https://github.com/atishaycn/pull-facebook-birthdays"><strong>pull-facebook-birthdays</strong><span>A utility for extracting Facebook birthday data.</span></a>
           <a class="project-card" data-project="readpalms" data-icon="RP" href="https://github.com/atishaycn/readpalms"><strong>readpalms</strong><span>A playful palm-reading app concept.</span></a>
           <a class="project-card launched" data-project="real-ones" data-icon="RO" href="https://apps.apple.com/us/app/real-ones/id6754051466"><strong>real_ones</strong><span>Launched iPhone app for staying close to real friends, now live on the App Store.</span></a>
+          <a class="project-card launched skills-card" data-project="skills" data-icon="SK" href="https://skills.phunnysunny.com/"><strong>Skills</strong><span>Hosted skills marketplace for browsing agent-ready cards, copying install prompts, and importing GitHub skill repos.</span></a>
+          <a class="project-card launched pet-zoo-card" data-project="pet-zoo" data-icon="PZ" href="https://petzoo.phunnysunny.com/"><strong>Pet Zoo</strong><span>Hosted Pets Park app for bringing Codex pets into a shared browser park with Petdex-style packs and share links.</span></a>
           <a class="project-card launched game-card" data-project="bug-blaster-web" data-icon="BG" href="https://game.phunnysunny.com/"><strong>Bug Blaster</strong><span>Hosted Swarm Run Canvas arcade game with auto-shooting, boss bugs, power-ups, and shared top-10 scores.</span></a>
           <a class="project-card" data-project="sims" data-icon="AI" href="#"><strong>sims</strong><span>A web-based AI life simulation prototype with autonomous relationships, memory, and mood drift.</span></a>
           <a class="project-card tall" data-project="skills-final" data-icon="SF" href="https://github.com/atishaycn/skills_final"><strong>skills_final</strong><span>A skill library with URL-based submission and hosted skill browsing.</span></a>
