@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`phunnysunny` is a personal bio and local project index for the projects in `/Users/sa/Developer`.
+`phunnysunny` is a personal bio and curated local project index for the strongest projects in `/Users/sa/Developer`.
 
 ## Important files
 
@@ -19,4 +19,4 @@
 
 ## Current brief
 
-Keep this as a simple, fun bio page with a complete `/Users/sa/Developer` project list and one short sentence per project. Real Ones and `game2` are the launched-project showcases and should sit beside each other near the top of the page. Real Ones should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `game2` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should use facts from `/Users/sa/Developer/game2`. Prefer small static changes unless the site needs a real build pipeline.
+Keep this as a simple, fun bio page with a curated `/Users/sa/Developer` project list and one short sentence per retained project. Do not show every local folder: remove duplicate branch copies, temporary scratch builds, incomplete concept variants, and generic experiments unless the user asks for a full inventory. Real Ones and `game2` are the launched-project showcases and should sit beside each other near the top of the page. Real Ones should keep its App Store download link, store screenshots, and local `real_ones` repo description aligned. `game2` is hosted at `https://game.phunnysunny.com/` as Bug Blaster: Swarm Run and should use facts from `/Users/sa/Developer/game2`. Prefer small static changes unless the site needs a real build pipeline.
