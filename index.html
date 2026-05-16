@@ -93,6 +93,38 @@
             </div>
           </article>
 
+          <article class="launch-feature darkmode-feature" id="darkmodeeverywhere">
+            <div class="launch-copy">
+              <div class="launch-row">
+                <span class="app-icon darkmode-icon" aria-hidden="true">DM</span>
+                <span>Public Chrome extension repo</span>
+              </div>
+              <h2>Dark Mode Everywhere flips the whole web after sunset.</h2>
+              <p>A tiny Chrome extension that turns pages dark by default, with a global switch and per-site opt-outs for pages that need their original look.</p>
+              <div class="launch-actions">
+                <a class="button button-light" href="https://github.com/atishaycn/darkmodeeverywhere">Get the extension</a>
+              </div>
+              <div class="app-facts" aria-label="Dark Mode Everywhere details">
+                <span>Chrome extension</span>
+                <span>Default-on dark mode</span>
+                <span>Per-site toggle</span>
+                <span>Public GitHub repo</span>
+              </div>
+            </div>
+            <div class="darkmode-stage" aria-label="Dark Mode Everywhere extension preview">
+              <div class="browser-mock browser-mock-light">
+                <span></span>
+                <strong>Bright page</strong>
+                <p>Original site colors</p>
+              </div>
+              <div class="browser-mock browser-mock-dark">
+                <span></span>
+                <strong>Proper dark mode</strong>
+                <p>Readable pages, one toggle away</p>
+              </div>
+            </div>
+          </article>
+
           <article class="launch-feature pet-zoo-feature" id="pet-zoo">
             <div class="launch-copy">
               <div class="launch-row">
@@ -153,24 +185,29 @@
         </div>
       </section>
 
-      <section class="intro-grid" id="vibe">
-        <article class="panel panel-wide">
-          <h2>Built like a notebook, shipped like a playground.</h2>
-          <p>Some repos are polished apps, some are sketchpads, and some are infrastructure experiments. The common thread is simple: make the idea visible fast, then keep the useful parts alive.</p>
-        </article>
-        <article class="panel">
-          <h3>Current shape</h3>
-          <p>Local-first prototypes, web surfaces, agent workflows, and practical tools.</p>
-        </article>
-        <article class="panel panel-dark panel-links">
-          <h3>Start here</h3>
-          <p>The shipped things worth opening first.</p>
-          <div class="quick-links" aria-label="Featured links">
-            <a href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
-            <a href="https://game.phunnysunny.com/">Play Bug Blaster</a>
-            <a href="https://skills.phunnysunny.com/">Browse Skills</a>
-          </div>
-        </article>
+      <section class="intro-grid" id="vibe" aria-labelledby="start-here-title">
+        <div class="intro-copy">
+          <p class="kicker">start here</p>
+          <h2 id="start-here-title">A few useful doors into the work.</h2>
+          <p>Launch the shipped apps, browse the local project map, or jump into the skill-hosting surface without digging through the whole page.</p>
+        </div>
+        <div class="intro-actions" aria-label="Useful shortcuts">
+          <a class="route-card route-card-primary" href="#real-ones">
+            <span>01</span>
+            <strong>Launched apps</strong>
+            <em>Real Ones and Bug Blaster, side by side.</em>
+          </a>
+          <a class="route-card" href="#projects">
+            <span>02</span>
+            <strong>Project map</strong>
+            <em>Everything in Developer with short context.</em>
+          </a>
+          <a class="route-card" href="https://skills.phunnysunny.com/">
+            <span>03</span>
+            <strong>Skills surface</strong>
+            <em>Hosted skills and agent-ready packages.</em>
+          </a>
+        </div>
       </section>
 
       <section class="project-section" id="projects">
@@ -204,6 +241,7 @@
           <a class="project-card" data-project="readpalms" data-icon="RP" href="https://github.com/atishaycn/readpalms"><strong>readpalms</strong><span>A playful palm-reading app concept.</span></a>
           <a class="project-card launched" data-project="real-ones" data-icon="RO" href="https://apps.apple.com/us/app/real-ones/id6754051466"><strong>real_ones</strong><span>Launched iPhone app for staying close to real friends, now live on the App Store.</span></a>
           <a class="project-card launched skills-card" data-project="skills" data-icon="SK" href="https://skills.phunnysunny.com/"><strong>Skills</strong><span>Hosted skills marketplace for browsing agent-ready cards, copying install prompts, and importing GitHub skill repos.</span></a>
+          <a class="project-card launched darkmode-card" data-project="darkmodeeverywhere" data-icon="DM" href="https://github.com/atishaycn/darkmodeeverywhere"><strong>Dark Mode Everywhere</strong><span>Public Chrome extension that makes pages dark by default with global and per-site controls.</span></a>
           <a class="project-card launched pet-zoo-card" data-project="pet-zoo" data-icon="PZ" href="https://petzoo.phunnysunny.com/"><strong>Pet Zoo</strong><span>Hosted Pets Park app for bringing Codex pets into a shared browser park with Petdex-style packs and share links.</span></a>
           <a class="project-card launched game-card" data-project="bug-blaster-web" data-icon="BG" href="https://game.phunnysunny.com/"><strong>Bug Blaster</strong><span>Hosted Swarm Run Canvas arcade game with auto-shooting, boss bugs, power-ups, and shared top-10 scores.</span></a>
           <a class="project-card" data-project="sims" data-icon="AI" href="#"><strong>sims</strong><span>A web-based AI life simulation prototype with autonomous relationships, memory, and mood drift.</span></a>

@@ -70,7 +70,7 @@
     }
   });
 
-  gsap.fromTo(".phone-shot, .game-asset", {
+  gsap.fromTo(".phone-shot, .game-asset, .browser-mock", {
     y: 42,
     opacity: 0.55
   }, {
