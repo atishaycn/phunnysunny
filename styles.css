@@ -426,6 +426,10 @@ h1 {
   transition: transform 680ms ease;
 }
 
+.launch-track.is-resetting {
+  transition: none;
+}
+
 .launch-feature {
   flex: 0 0 min(760px, 74vw);
   display: grid;
@@ -452,6 +456,10 @@ h1 {
   opacity: 1;
   filter: none;
   pointer-events: auto;
+}
+
+.launch-feature.is-clone {
+  pointer-events: none;
 }
 
 .real-ones-feature {
@@ -1531,6 +1539,10 @@ h1 {
     transform: none;
   }
 
+  .launch-track.is-resetting {
+    transition: none;
+  }
+
   .launch-feature {
     flex-basis: auto;
     width: 100%;
@@ -1541,6 +1553,10 @@ h1 {
     border-width: 3px;
     border-radius: 18px;
     min-height: auto;
+  }
+
+  .launch-feature.is-clone {
+    display: none;
   }
 
   .intro-grid {
