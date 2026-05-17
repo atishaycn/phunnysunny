@@ -11,7 +11,9 @@
     let activeSlide = 0;
     let trackIndex = 1;
     let autoAdvanceId = null;
+    let wheelLock = false;
 
+    launchShowcase.setAttribute("tabindex", "0");
     firstClone.setAttribute("aria-hidden", "true");
     lastClone.setAttribute("aria-hidden", "true");
     firstClone.classList.add("is-clone");
@@ -71,12 +73,25 @@
       }
     };
 
-    const stopCarousel = () => {
+    const pauseCarousel = () => {
       if (autoAdvanceId) {
         window.clearInterval(autoAdvanceId);
         autoAdvanceId = null;
       }
+    };
+
+    const stopCarousel = () => {
+      pauseCarousel();
       setActiveSlide(activeSlide, true);
+    };
+
+    const moveCarousel = (direction) => {
+      if (!desktopCarousel.matches) {
+        return;
+      }
+
+      pauseCarousel();
+      setTrackPosition(trackIndex + direction);
     };
 
     launchTrack?.addEventListener("transitionend", (event) => {
@@ -109,6 +124,36 @@
     syncCarouselMode();
     window.addEventListener("resize", () => setTrackPosition(trackIndex, true));
     desktopCarousel.addEventListener("change", syncCarouselMode);
+    launchShowcase.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        moveCarousel(1);
+      }
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        moveCarousel(-1);
+      }
+    });
+    launchShowcase.addEventListener("wheel", (event) => {
+      if (!desktopCarousel.matches || wheelLock) {
+        return;
+      }
+
+      const horizontalIntent = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+      const delta = horizontalIntent ? event.deltaX : event.deltaY;
+
+      if (Math.abs(delta) < 18) {
+        return;
+      }
+
+      event.preventDefault();
+      wheelLock = true;
+      moveCarousel(delta > 0 ? 1 : -1);
+      window.setTimeout(() => {
+        wheelLock = false;
+      }, 720);
+    }, { passive: false });
   }
 
   if (!window.gsap || prefersReducedMotion) {
