@@ -1,4 +1,9 @@
 node_modules/
 .vercel/
+.env
+.env.*
 .DS_Store
 npm-debug.log*
+
+# Temporary videos hosted for Instagram posting
+assets/*.mp4

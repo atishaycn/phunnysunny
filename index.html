@@ -3,312 +3,184 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A simple, fun bio page and project map for phunnysunny.">
-    <title>phunnysunny</title>
+    <meta name="description" content="Playful apps, agent systems, browser experiments, and public projects by phunnysunny.">
+    <meta name="theme-color" content="#f3f2eb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#171813" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="phunnysunny | Playful tools for the internet">
+    <meta property="og:description" content="Small tools, public experiments, and shipped proofs of work.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/home/pet-zoo-park.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>phunnysunny | Playful tools for the internet</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <main class="page-shell">
+  <body class="home-page">
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <header class="home-header">
       <nav class="nav" aria-label="Primary">
         <a class="brand" href="#top" aria-label="phunnysunny home">phunnysunny</a>
-        <div class="nav-links">
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
           <a href="#real-ones">Real Ones</a>
           <a href="https://skills.phunnysunny.com/">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#vibe">Vibe</a>
+          <a href="/tiktok">TikTok Tool</a>
+          <a href="/postshort">Postshort</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
+    </header>
 
+    <main class="page-shell">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="kicker">small tools, bright loops, real shipping energy</p>
-          <h1>I make playful <span class="inline-photo" aria-hidden="true"></span> internet things that keep moving.</h1>
-          <p class="hero-text">A sunny corner for experiments, agents, cameras, friend graphs, event helpers, and tiny systems that turn half-ideas into working surfaces.</p>
+          <h1>Playful tools for people and the internet.</h1>
+          <p class="hero-text">iPhone apps, agent systems, browser experiments, and small products that earn their place.</p>
           <div class="hero-actions">
             <a class="button button-light" href="#projects">Browse projects</a>
             <a class="button button-dark" href="https://github.com/atishaycn">GitHub</a>
-            <a class="button button-ghost" href="https://x.com/phunnysunny">X</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="Abstract studio image">
-          <div class="hero-card hero-card-main"></div>
-          <div class="hero-card hero-card-small"></div>
+        <figure class="hero-art" aria-label="Real Ones and Pet Zoo project previews">
+          <img class="hero-phone" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen" width="600" height="1300">
+          <img class="hero-landscape" src="assets/home/pet-zoo-park.jpg" alt="Codex pets together in the Pet Zoo park" width="1672" height="941">
+        </figure>
+      </section>
+
+      <section class="launch-showcase" id="real-ones" aria-labelledby="launch-title">
+        <div class="launch-heading">
+          <p class="section-kicker">Shipped work</p>
+          <h2 id="launch-title">Five shipped projects.</h2>
+        </div>
+        <div class="launch-viewport">
+          <div class="launch-track">
+            <article class="launch-feature is-active" id="real-ones-app">
+              <div class="launch-copy">
+                <div class="launch-row"><img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/92/2e/c8922ec8-e79e-b243-3040-f633134ad827/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/256x256bb.png" alt="Real Ones app icon"><span>Launched on the App Store</span></div>
+                <h3>Real Ones</h3>
+                <p>Remember birthdays, save message ideas, and schedule thoughtful check-ins. Everything stays offline on your iPhone.</p>
+                <div class="app-facts" aria-label="Real Ones details"><span>Free iPhone app</span><span>iOS 18+</span><span>Offline-only data</span><span>Nothing synced to cloud</span></div>
+                <a class="project-action" href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
+              </div>
+              <div class="launch-media phone-strip" aria-label="Real Ones app screenshots">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen" width="600" height="1300">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen" width="600" height="1300">
+              </div>
+            </article>
+
+            <article class="launch-feature" id="skills">
+              <div class="launch-copy">
+                <div class="launch-row"><span class="app-icon type-icon" aria-hidden="true">S</span><span>Hosted at skills.phunnysunny.com</span></div>
+                <h3>Skills</h3>
+                <p>Browse agent-ready skills, copy install prompts, and import GitHub metadata for backend validation.</p>
+                <div class="app-facts" aria-label="Skills details"><span>Skill cards</span><span>Install prompts</span><span>GitHub import</span><span>Public catalog</span></div>
+                <a class="project-action" href="https://skills.phunnysunny.com/">Browse Skills</a>
+              </div>
+              <figure class="launch-media media-frame"><img src="assets/home/skills-marketplace.png" alt="The live Skills marketplace homepage" width="1440" height="1000"></figure>
+            </article>
+
+            <article class="launch-feature" id="darkmodeeverywhere">
+              <div class="launch-copy">
+                <div class="launch-row"><span class="app-icon type-icon" aria-hidden="true">DM</span><span>Public Chrome extension repo</span></div>
+                <h3>Dark Mode Everywhere</h3>
+                <p>Make pages dark by default, then opt out globally or site by site.</p>
+                <div class="app-facts" aria-label="Dark Mode Everywhere details"><span>Chrome extension</span><span>Default-on dark mode</span><span>Per-site toggle</span><span>Public GitHub repo</span></div>
+                <a class="project-action" href="https://github.com/atishaycn/darkmodeeverywhere">Get the extension</a>
+              </div>
+              <figure class="launch-media media-frame"><img src="assets/home/darkmode-repo.png" alt="Dark Mode Everywhere public GitHub repository" width="1440" height="1000"></figure>
+            </article>
+
+            <article class="launch-feature" id="pet-zoo">
+              <div class="launch-copy">
+                <div class="launch-row"><img class="app-icon" src="assets/home/pet-zoo-park.jpg" alt="Pet Zoo park"><span>Hosted at petzoo.phunnysunny.com</span></div>
+                <h3>Pet Zoo</h3>
+                <p>Bring Codex pets into a shared browser park with Petdex packs and shareable links.</p>
+                <div class="app-facts" aria-label="Pet Zoo details"><span>Codex pets</span><span>Shared park</span><span>Petdex packs</span><span>Share links</span></div>
+                <a class="project-action" href="https://petzoo.phunnysunny.com/">Visit Pet Zoo</a>
+              </div>
+              <figure class="launch-media media-frame"><img src="assets/home/pet-zoo-park.jpg" alt="Pets gathered in the shared Pet Zoo park" width="1672" height="941"></figure>
+            </article>
+
+            <article class="launch-feature" id="bug-blaster">
+              <div class="launch-copy">
+                <div class="launch-row"><img class="app-icon" src="https://game.phunnysunny.com/assets/player.svg" alt="Bug Blaster player"><span>Hosted at game.phunnysunny.com</span></div>
+                <h3>Bug Blaster</h3>
+                <p>Jump, auto-shoot, collect power-ups, fight boss bugs, and chase the shared top-10 scoreboard.</p>
+                <div class="app-facts" aria-label="Bug Blaster details"><span>Canvas arcade</span><span>Auto-shooting</span><span>Boss bugs</span><span>Top-10 scores</span></div>
+                <a class="project-action" href="https://game.phunnysunny.com/">Play Bug Blaster</a>
+              </div>
+              <figure class="launch-media media-frame"><img src="assets/home/bug-blaster.png" alt="Bug Blaster game running in the browser" width="1440" height="900"></figure>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls" aria-label="Launched project controls">
+          <button class="carousel-button carousel-prev" type="button" aria-label="Previous project">Previous</button>
+          <p class="carousel-status" aria-live="off">1 of 5</p>
+          <button class="carousel-button carousel-toggle" type="button" aria-pressed="false">Pause</button>
+          <button class="carousel-button carousel-next" type="button" aria-label="Next project">Next</button>
         </div>
       </section>
 
-      <section class="launch-showcase" id="real-ones" aria-label="Launched projects">
-        <div class="launch-track">
-          <article class="launch-feature real-ones-feature is-active">
-          <div class="launch-copy">
-            <div class="launch-row">
-              <img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c8/92/2e/c8922ec8-e79e-b243-3040-f633134ad827/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/256x256bb.png" alt="Real Ones app icon">
-              <span>Launched on the App Store</span>
-            </div>
-            <h2>Real Ones helps you keep your closest people close.</h2>
-            <p>Track the friends who matter, remember birthdays and important dates, save message ideas, and schedule thoughtful check-ins through iMessage or WhatsApp. Your data stays offline on your phone, with nothing synced to the cloud.</p>
-            <div class="launch-actions">
-              <a class="button button-light" href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
-            </div>
-            <div class="app-facts" aria-label="Real Ones details">
-              <span>Free iPhone app</span>
-              <span>iOS 18+</span>
-              <span>Offline-only data</span>
-              <span>Nothing synced to cloud</span>
-            </div>
-          </div>
-          <div class="phone-strip" aria-label="Real Ones app screenshots">
-            <img class="phone-shot shot-one" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen">
-            <img class="phone-shot shot-two" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen">
-            <img class="phone-shot shot-three" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen">
-          </div>
-          </article>
-
-          <article class="launch-feature skills-feature" id="skills">
-            <div class="launch-copy">
-              <div class="launch-row">
-                <span class="app-icon skills-icon" aria-hidden="true">S</span>
-                <span>Hosted at skills.phunnysunny.com</span>
-              </div>
-              <h2>Skills is a public marketplace for agent-ready skills.</h2>
-              <p>Browse useful skill cards, copy install prompts, and submit GitHub repositories that auto-import metadata before backend validation.</p>
-              <div class="launch-actions">
-                <a class="button button-light" href="https://skills.phunnysunny.com/">Browse Skills</a>
-              </div>
-              <div class="app-facts" aria-label="Skills details">
-                <span>Skill cards</span>
-                <span>Install prompts</span>
-                <span>GitHub import</span>
-                <span>Public catalog</span>
-              </div>
-            </div>
-            <div class="skills-stage" aria-label="Skills catalog preview">
-              <div class="skills-mini-card">Frontend taste<span>Premium UI standards</span></div>
-              <div class="skills-mini-card">Agent tools<span>Copy-ready install prompts</span></div>
-              <div class="skills-mini-card">GitHub import<span>Metadata pulled from repos</span></div>
-            </div>
-          </article>
-
-          <article class="launch-feature darkmode-feature" id="darkmodeeverywhere">
-            <div class="launch-copy">
-              <div class="launch-row">
-                <span class="app-icon darkmode-icon" aria-hidden="true">DM</span>
-                <span>Public Chrome extension repo</span>
-              </div>
-              <h2>Dark Mode Everywhere flips the whole web after sunset.</h2>
-              <p>A tiny Chrome extension that turns pages dark by default, with a global switch and per-site opt-outs for pages that need their original look.</p>
-              <div class="launch-actions">
-                <a class="button button-light" href="https://github.com/atishaycn/darkmodeeverywhere">Get the extension</a>
-              </div>
-              <div class="app-facts" aria-label="Dark Mode Everywhere details">
-                <span>Chrome extension</span>
-                <span>Default-on dark mode</span>
-                <span>Per-site toggle</span>
-                <span>Public GitHub repo</span>
-              </div>
-            </div>
-            <div class="darkmode-stage" aria-label="Dark Mode Everywhere extension preview">
-              <div class="browser-mock browser-mock-light">
-                <span></span>
-                <strong>Bright page</strong>
-                <p>Original site colors</p>
-              </div>
-              <div class="browser-mock browser-mock-dark">
-                <span></span>
-                <strong>Proper dark mode</strong>
-                <p>Readable pages, one toggle away</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="launch-feature pet-zoo-feature" id="pet-zoo">
-            <div class="launch-copy">
-              <div class="launch-row">
-                <img class="app-icon pet-zoo-icon" src="assets/pet-zoo-park.png" alt="Pet Zoo park">
-                <span>Hosted at petzoo.phunnysunny.com</span>
-              </div>
-              <h2>Pet Zoo lets Codex pets wander into a shared park.</h2>
-              <p>Bring Petdex-style Codex pets into a playful browser park, browse launch-safe shared pets, and open saved companions through shareable pet links.</p>
-              <div class="launch-actions">
-                <a class="button button-light" href="https://petzoo.phunnysunny.com/">Visit Pet Zoo</a>
-              </div>
-              <div class="app-facts" aria-label="Pet Zoo details">
-                <span>Codex pets</span>
-                <span>Shared park</span>
-                <span>Petdex packs</span>
-                <span>Share links</span>
-              </div>
-            </div>
-            <div class="pet-zoo-stage" aria-label="Pet Zoo park preview">
-              <img src="assets/pet-zoo-park.png" alt="">
-            </div>
-          </article>
-
-          <article class="launch-feature game-feature" id="bug-blaster">
-          <div class="launch-copy">
-            <div class="launch-row">
-              <img class="app-icon game-icon" src="https://game.phunnysunny.com/assets/player.svg" alt="Bug Blaster player">
-              <span>Hosted at game.phunnysunny.com</span>
-            </div>
-            <h2>Bug Blaster turns a browser tab into a swarm run.</h2>
-            <p>Jump, auto-shoot, grab power-ups, fight boss bugs, and chase the shared top-10 scoreboard in a zero-build Canvas arcade game.</p>
-            <div class="launch-actions">
-              <a class="button button-light" href="https://game.phunnysunny.com/">Play Bug Blaster</a>
-            </div>
-            <div class="app-facts" aria-label="Bug Blaster details">
-              <span>Canvas arcade</span>
-              <span>Auto-shooting</span>
-              <span>Boss bugs</span>
-              <span>Top-10 scores</span>
-            </div>
-          </div>
-          <div class="game-stage" aria-label="Bug Blaster game scene">
-            <img class="game-asset game-player" src="https://game.phunnysunny.com/assets/player.svg" alt="">
-            <img class="game-asset game-bug-one" src="https://game.phunnysunny.com/assets/bug-ground.svg" alt="">
-            <img class="game-asset game-bug-two" src="https://game.phunnysunny.com/assets/bug-flying.svg" alt="">
-            <img class="game-asset game-boss" src="https://game.phunnysunny.com/assets/collector.svg" alt="">
-            <div class="game-beam" aria-hidden="true"></div>
-            <div class="game-score" aria-hidden="true">TOP 10</div>
-          </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="marquee-wrap" aria-label="Project themes">
-        <div class="marquee">
-          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span>
-          <span>agents</span><span>camera labs</span><span>friend graphs</span><span>event scouts</span><span>skill hosting</span><span>tiny pipelines</span>
-        </div>
-      </section>
-
-      <section class="intro-grid" id="vibe" aria-labelledby="start-here-title">
-        <div class="intro-copy">
-          <p class="kicker">start here</p>
-          <h2 id="start-here-title">A few useful doors into the work.</h2>
-          <p>Launch the shipped apps, browse the local project map, or jump into the skill-hosting surface without digging through the whole page.</p>
-        </div>
-        <div class="intro-actions" aria-label="Useful shortcuts">
-          <a class="route-card route-card-primary" href="#real-ones">
-            <span>01</span>
-            <strong>Launched apps</strong>
-            <em>Real Ones and Bug Blaster, side by side.</em>
-          </a>
-          <a class="route-card" href="#projects">
-            <span>02</span>
-            <strong>Project map</strong>
-            <em>Everything in Developer with short context.</em>
-          </a>
-          <a class="route-card" href="https://skills.phunnysunny.com/">
-            <span>03</span>
-            <strong>Skills surface</strong>
-            <em>Hosted skills and agent-ready packages.</em>
-          </a>
-        </div>
-      </section>
-
-      <section class="project-section" id="projects">
+      <section class="project-section" id="projects" aria-labelledby="projects-title">
         <div class="section-head">
-          <h2>Ongoing experiments.</h2>
-          <p>The local Developer projects that look ready, useful, or durable enough to show.</p>
+          <h2 id="projects-title">Ongoing experiments.</h2>
+          <p>A tighter edit of camera tools, local utilities, and agent systems with enough shape to share.</p>
         </div>
         <div class="project-grid">
-          <a class="project-card tall" data-project="55cam" data-icon="55" href="https://github.com/atishaycn/55cam"><strong>55cam</strong><span>A minimal iPhone camera app for one-tap disposable-style photos.</span></a>
-          <a class="project-card" data-project="localx" data-icon="X" href="#"><strong>localx</strong><span>A macOS SwiftUI utility for reading signed-in X timelines through a local Chrome session.</span></a>
-          <a class="project-card wide" data-project="agent-content-pipeline" data-icon="AP" href="https://github.com/atishaycn/agent-content-pipeline"><strong>agent-content-pipeline</strong><span>A pipeline for turning agent work into structured content outputs.</span></a>
-          <a class="project-card" data-project="agent-guardrails-runner" data-icon="GR" href="https://github.com/atishaycn/agent-guardrails-runner"><strong>agent-guardrails-runner</strong><span>A local CLI that enforces completion guardrails around agent runs.</span></a>
-          <a class="project-card" data-project="agent-native-mac-app-lab" data-icon="MA" href="https://github.com/atishaycn/agent-native-mac-app-lab"><strong>agent-native-mac-app-lab</strong><span>A lab for agent-native macOS app patterns.</span></a>
-          <a class="project-card" data-project="bugblaster" data-icon="BB" href="#"><strong>bugblaster</strong><span>A native SpriteKit iOS port of Bug Blaster: Swarm Run.</span></a>
-          <a class="project-card wide" data-project="c-and-s" data-icon="C+S" href="https://github.com/atishaycn/c_and_s"><strong>c_and_s</strong><span>A wedding website with a warm public-facing presentation.</span></a>
-          <a class="project-card" data-project="chatfaucet" data-icon="CF" href="https://github.com/financialvice/chatfaucet"><strong>chatfaucet</strong><span>A chat faucet project for routing and testing conversational access.</span></a>
-          <a class="project-card" data-project="creator-pipeline-factory" data-icon="CP" href="https://github.com/atishaycn/creator-pipeline-factory"><strong>creator-pipeline-factory</strong><span>A factory for assembling creator content workflows.</span></a>
-          <a class="project-card tall" data-project="findFriends" data-icon="FF" href="https://github.com/atishaycn/findFriends"><strong>findFriends</strong><span>A friend graph app for mapping people and relationships.</span></a>
-          <a class="project-card" data-project="gymcheckin" data-icon="GC" href="#"><strong>gymcheckin</strong><span>An iOS SwiftUI progress-photo check-in app with AI trend analysis.</span></a>
-          <a class="project-card wide" data-project="html-to-video-agent-studio" data-icon="HV" href="https://github.com/atishaycn/html-to-video-agent-studio"><strong>html-to-video-agent-studio</strong><span>A local MVP for previewing and rendering HTML-to-video templates.</span></a>
-          <a class="project-card wide" data-project="knowledge-synced-agent-layer" data-icon="KS" href="https://github.com/atishaycn/knowledge-synced-agent-layer"><strong>knowledge-synced-agent-layer</strong><span>An agent layer that keeps knowledge synced across workflows.</span></a>
-          <a class="project-card" data-project="langAgent" data-icon="LA" href="https://github.com/atishaycn/langAgent"><strong>langAgent</strong><span>A LangGraph agent for scanning and reasoning over tweets.</span></a>
-          <a class="project-card" data-project="mostcam" data-icon="MC" href="https://github.com/atishaycn/mostcam"><strong>mostcam</strong><span>An iOS camera app tuned for disposable-camera-style snapshots.</span></a>
-          <a class="project-card" data-project="onecam" data-icon="1C" href="#"><strong>onecam</strong><span>Snap400, a one-screen SwiftUI camera app with a learned ISO-400-style render path.</span></a>
-          <a class="project-card" data-project="paperclip" data-icon="PC" href="#"><strong>paperclip</strong><span>A local-first macOS assistant shell with Pi auth setup and a Codex pet surface.</span></a>
-          <a class="project-card wide" data-project="persistent-ops-thread" data-icon="OT" href="https://github.com/atishaycn/persistent-ops-thread"><strong>persistent-ops-thread</strong><span>An AI chief-of-staff product for durable operations and approvals.</span></a>
-          <a class="project-card" data-project="phunnysunny" data-icon="PS" href="#"><strong>phunnysunny</strong><span>This bio page and local project index.</span></a>
-          <a class="project-card" data-project="pi-faucet" data-icon="PI" href="#"><strong>pi-faucet</strong><span>An OpenAI-compatible gateway for Pi and Codex-style chat auth.</span></a>
-          <a class="project-card" data-project="pi-mono" data-icon="PM" href="https://github.com/badlogic/pi-mono"><strong>pi-mono</strong><span>A Pi-focused monorepo for gateway and interface experiments.</span></a>
-          <a class="project-card" data-project="pull-facebook-birthdays" data-icon="BD" href="https://github.com/atishaycn/pull-facebook-birthdays"><strong>pull-facebook-birthdays</strong><span>A utility for extracting Facebook birthday data.</span></a>
-          <a class="project-card" data-project="readpalms" data-icon="RP" href="https://github.com/atishaycn/readpalms"><strong>readpalms</strong><span>A playful palm-reading app concept.</span></a>
-          <a class="project-card launched" data-project="real-ones" data-icon="RO" href="https://apps.apple.com/us/app/real-ones/id6754051466"><strong>real_ones</strong><span>Launched iPhone app for staying close to real friends, now live on the App Store.</span></a>
-          <a class="project-card launched skills-card" data-project="skills" data-icon="SK" href="https://skills.phunnysunny.com/"><strong>Skills</strong><span>Hosted skills marketplace for browsing agent-ready cards, copying install prompts, and importing GitHub skill repos.</span></a>
-          <a class="project-card launched darkmode-card" data-project="darkmodeeverywhere" data-icon="DM" href="https://github.com/atishaycn/darkmodeeverywhere"><strong>Dark Mode Everywhere</strong><span>Public Chrome extension that makes pages dark by default with global and per-site controls.</span></a>
-          <a class="project-card launched pet-zoo-card" data-project="pet-zoo" data-icon="PZ" href="https://petzoo.phunnysunny.com/"><strong>Pet Zoo</strong><span>Hosted Pets Park app for bringing Codex pets into a shared browser park with Petdex-style packs and share links.</span></a>
-          <a class="project-card launched game-card" data-project="bug-blaster-web" data-icon="BG" href="https://game.phunnysunny.com/"><strong>Bug Blaster</strong><span>Hosted Swarm Run Canvas arcade game with auto-shooting, boss bugs, power-ups, and shared top-10 scores.</span></a>
-          <a class="project-card" data-project="sims" data-icon="AI" href="#"><strong>sims</strong><span>A web-based AI life simulation prototype with autonomous relationships, memory, and mood drift.</span></a>
-          <a class="project-card tall" data-project="skills-final" data-icon="SF" href="https://github.com/atishaycn/skills_final"><strong>skills_final</strong><span>A skill library with URL-based submission and hosted skill browsing.</span></a>
-          <a class="project-card" data-project="vtechcs" data-icon="VT" href="https://github.com/atishaycn/vtechcs.com"><strong>vtechcs.com</strong><span>A public website project for VTech CS material.</span></a>
+          <a class="project-card project-lead" data-project="55cam" data-icon="55" href="https://github.com/atishaycn/55cam"><strong>55cam</strong><span>A minimal iPhone camera app for one-tap disposable-style photos.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="agent-content-pipeline" data-icon="AP" href="https://github.com/atishaycn/agent-content-pipeline"><strong>agent-content-pipeline</strong><span>Turns agent work into structured content outputs.</span><em>Open repository</em></a>
+          <article class="project-card project-local" data-project="localx" data-icon="X"><strong>localx</strong><span>A macOS utility for reading X timelines through a local Chrome session.</span><em>Local project</em></article>
+          <a class="project-card project-wide" data-project="findFriends" data-icon="FF" href="https://github.com/atishaycn/findFriends"><strong>findFriends</strong><span>A friend graph app for mapping people and relationships.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="agent-guardrails-runner" data-icon="GR" href="https://github.com/atishaycn/agent-guardrails-runner"><strong>agent-guardrails-runner</strong><span>A local CLI that enforces completion guardrails around agent runs.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="html-to-video-agent-studio" data-icon="HV" href="https://github.com/atishaycn/html-to-video-agent-studio"><strong>html-to-video-agent-studio</strong><span>Previews and renders HTML-to-video templates locally.</span><em>Open repository</em></a>
+          <article class="project-card project-local" data-project="paperclip" data-icon="PC"><strong>paperclip</strong><span>A local-first macOS assistant shell with Pi auth and a Codex pet surface.</span><em>Local project</em></article>
+          <a class="project-card project-wide" data-project="persistent-ops-thread" data-icon="OT" href="https://github.com/atishaycn/persistent-ops-thread"><strong>persistent-ops-thread</strong><span>An AI chief-of-staff product for durable operations and approvals.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="mostcam" data-icon="MC" href="https://github.com/atishaycn/mostcam"><strong>mostcam</strong><span>An iOS camera app tuned for disposable-camera-style snapshots.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="creator-pipeline-factory" data-icon="CP" href="https://github.com/atishaycn/creator-pipeline-factory"><strong>creator-pipeline-factory</strong><span>A factory for assembling creator content workflows.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="postshort" data-icon="PS" href="/postshort"><strong>Postshort</strong><span>A private desktop tool for preparing and publishing videos to the operator's YouTube and Instagram accounts.</span><em>Read about the tool</em></a>
+        </div>
+
+        <div class="project-archive" aria-labelledby="archive-title">
+          <div class="archive-intro"><h3 id="archive-title">Browse more projects.</h3><p>Explore the wider folder by category without making every experiment compete for attention.</p></div>
+          <div class="archive-groups">
+            <details><summary>Capture labs</summary><p>55cam, amazingcam, bestcam, cursorcam, mostcam</p><a href="https://github.com/atishaycn/amazingcam">Open amazingcam</a></details>
+            <details><summary>People tools</summary><p>findFriends, friendgraphapp, pullBirthdays</p><a href="https://github.com/atishaycn/pull-facebook-birthdays">Open birthday utility</a></details>
+            <details><summary>Weekend scouts</summary><p>events, eventsUI, weekend-radar, poster-lane, neighborhood-notebook</p><a href="https://github.com/atishaycn/kids-events-weekend-radar">Open weekend radar</a></details>
+            <details><summary>Agent systems</summary><p>agent-content-pipeline, hostskills, pi-faucet, persistent-ops-thread</p><a href="https://github.com/atishaycn/agent-content-pipeline">Open pipeline</a></details>
+          </div>
         </div>
       </section>
 
-      <section class="motion-story">
-        <div class="sticky-title">
-          <h2>Project lanes.</h2>
-          <p>A faster way into the big folder list: start with the kind of thing you want to inspect, then jump into a representative repo.</p>
+      <section class="about-section" id="vibe" aria-labelledby="vibe-title">
+        <div class="about-copy">
+          <h2 id="vibe-title">Small starts. Working surfaces.</h2>
+          <p>I like turning loose ideas into useful apps, public repositories, and playful browser experiments. The best ones become products people can actually open.</p>
+          <p>Curious collaborators, practical prototypes, and strange little tools are welcome.</p>
+          <a class="text-link" href="#contact">Contact</a>
         </div>
-        <div class="stack-cards" aria-label="Project lanes">
-          <article class="stack-card">
-            <span>01</span>
-            <strong>Capture labs</strong>
-            <p>Camera experiments and quick visual loops.</p>
-            <div class="lane-meta">55cam, amazingcam, bestcam, cursorcam, mostcam</div>
-            <div class="lane-links">
-              <a href="https://github.com/atishaycn/55cam">Open 55cam</a>
-              <a href="https://github.com/atishaycn/amazingcam">Open amazingcam</a>
-            </div>
-          </article>
-          <article class="stack-card">
-            <span>02</span>
-            <strong>People tools</strong>
-            <p>Friend graphs, reminders, birthdays, and close-people apps.</p>
-            <div class="lane-meta">Real Ones, findFriends, friendgraphapp, pullBirthdays</div>
-            <div class="lane-links">
-              <a href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
-              <a href="https://github.com/atishaycn/findFriends">Open findFriends</a>
-            </div>
-          </article>
-          <article class="stack-card">
-            <span>03</span>
-            <strong>Weekend scouts</strong>
-            <p>Kids event finders and local discovery surfaces.</p>
-            <div class="lane-meta">events, eventsUI, weekend-radar, poster-lane, neighborhood-notebook</div>
-            <div class="lane-links">
-              <a href="https://github.com/atishaycn/events">Open events</a>
-              <a href="https://github.com/atishaycn/kids-events-weekend-radar">Open radar</a>
-            </div>
-          </article>
-          <article class="stack-card">
-            <span>04</span>
-            <strong>Agent systems</strong>
-            <p>Pipelines, guardrails, gateways, hosted skills, and ops layers.</p>
-            <div class="lane-meta">agent-content-pipeline, hostskills, pi-faucet, persistent-ops-thread</div>
-            <div class="lane-links">
-              <a href="https://github.com/atishaycn/agent-content-pipeline">Open pipeline</a>
-              <a href="https://skills.phunnysunny.com/">Browse skills</a>
-            </div>
-          </article>
-        </div>
+        <figure class="about-media"><img src="assets/home/skills-marketplace.png" alt="A shipped project open in the browser" width="1440" height="1000"></figure>
       </section>
-
-      <footer class="footer" id="contact">
-        <h2>Keep the tab sunny.</h2>
-        <p>Personal experiments, small systems, and shipped proofs of work.</p>
-        <div class="footer-links">
-          <a href="https://github.com/atishaycn">GitHub</a>
-          <a href="https://x.com/phunnysunny">X</a>
-          <a href="#top">Back to top</a>
-        </div>
-      </footer>
     </main>
+
+    <footer class="footer" id="contact">
+      <div><h2>Keep the tab sunny.</h2><p>Small tools, public experiments, and shipped proofs of work.</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/atishaycn">GitHub</a>
+        <a href="https://x.com/phunnysunny">X</a>
+        <a href="/tiktok">TikTok Tool</a>
+        <a href="/postshort">Postshort</a>
+        <a href="/tos">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/data-deletion">Data Deletion</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>

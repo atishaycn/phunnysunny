@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Postshort by PhunnySunny: a private desktop tool for preparing and publishing videos to authorized YouTube and Instagram accounts.">
+    <title>Postshort - phunnysunny</title>
+    <link rel="canonical" href="https://phunnysunny.com/postshort">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      .postshort-page .nav { position: static; left: auto; transform: none; width: min(900px, calc(100% - 36px)); flex-wrap: wrap; gap: 16px; margin: 0 auto 28px; }
+      .postshort-page .nav-links { flex-wrap: wrap; }
+      .postshort-page .legal-card { padding: clamp(20px, 5vw, 44px); }
+      .postshort-page .legal-card h1 { overflow-wrap: anywhere; }
+      .postshort-page .permission-list { padding-left: 22px; line-height: 1.7; }
+      .postshort-page .permission-list li { margin-bottom: 12px; }
+      .postshort-page code { overflow-wrap: anywhere; }
+      .postshort-page .tool-status { margin-bottom: 28px; }
+      .postshort-page .legal-card a { overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell legal-page postshort-page">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="/" aria-label="phunnysunny home">phunnysunny</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/tos">Terms</a>
+        </div>
+      </nav>
+
+      <article class="legal-card">
+        <p class="kicker">Creator tools</p>
+        <h1>Postshort</h1>
+        <p>A private desktop tool by PhunnySunny for preparing and publishing videos to the operator's authorized YouTube and Instagram accounts.</p>
+        <p class="tool-status">This is an information page, not a public upload service. PhunnySunny currently operates the tool only for its own authorized accounts. You cannot connect an account or publish a video from this website. YouTube account setup is in progress.</p>
+
+        <section>
+          <h2>How the desktop workflow works</h2>
+          <p>The operator prepares a video, Instagram caption, YouTube title, description and tags, destination accounts, and publishing settings in a local account-specific queue. The tool checks the content and connected account before the operator runs the posting command.</p>
+          <p>For YouTube, the tool uploads the selected video through YouTube API Services, applies the chosen privacy, audience, synthetic-media, and optional publishing-time settings, and saves the upload result locally. The operator can manage the resulting video in YouTube Studio. For Instagram, it uses Instagram's publishing API.</p>
+          <p>Requested privacy and scheduling settings are subject to YouTube's restrictions. An API upload may remain private even when the operator requested a public video.</p>
+        </section>
+
+        <section>
+          <h2>Google authorization and permissions</h2>
+          <p>Authorization happens in Google's sign-in and consent screens from the local desktop setup tool. Google returns the result to a local callback on the operator's computer. This public page does not collect Google passwords or tokens.</p>
+          <ul class="permission-list">
+            <li><code>youtube.upload</code> allows the tool to upload the video and metadata selected by the operator.</li>
+            <li><code>youtube.force-ssl</code> grants broader YouTube account-management access. The current workflow uses it to confirm the authorized channel and support posting. It does not provide an automated comment moderation or video-deletion feature.</li>
+            <li><code>yt-analytics.readonly</code> is requested for planned read-only channel performance reporting. This permission does not itself publish content, and reporting is not currently available through this website.</li>
+          </ul>
+          <p>Permissions are limited to the account you authorize. You can decline authorization or revoke it later. The tool needs a locally stored refresh token to maintain the authorized connection without repeated sign-ins.</p>
+        </section>
+
+        <section>
+          <h2>Your data and control</h2>
+          <p>Account credentials, channel identifiers, source media, metadata, and posting records stay on the operator's computer unless needed for an authorized platform action. Uploading to YouTube sends the selected media and metadata to Google / YouTube. This static information page does not receive those files.</p>
+          <p>Our <a href="/privacy#google-youtube">privacy policy</a> explains Google data use, local storage, retention, sharing, and Limited Use restrictions. Our <a href="/tos#postshort">terms</a> explain your responsibilities and the applicable YouTube terms.</p>
+          <p>Stop posting jobs and revoke the connection through <a href="https://myaccount.google.com/connections">Google Account connections</a> to stop future authorized access. Remove local credentials and records you no longer need. Revocation does not delete local data or uploaded videos; manage those videos in YouTube Studio.</p>
+          <p>For data held by PhunnySunny, follow our <a href="/data-deletion">data deletion instructions</a> or email the support address below. Never send a password or token in a support request.</p>
+        </section>
+
+        <section>
+          <h2>About the TikTok demo</h2>
+          <p>The separate <a href="/tiktok">TikTok creator-tool page</a> is a sandbox demo. Its account connection and posting actions are simulated. It is not a production TikTok integration, and this Postshort page does not change that.</p>
+        </section>
+
+        <section>
+          <h2>Support</h2>
+          <p>Postshort is operated by PhunnySunny. For account connection, privacy, or deletion questions, email <a href="mailto:sunnyjaincn@gmail.com">sunnyjaincn@gmail.com</a>.</p>
+          <p>Postshort is not affiliated with or endorsed by Google, YouTube, Meta, Instagram, or TikTok.</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

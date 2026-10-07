@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TikTok integration demo for PhunnySunny.">
+    <title>TikTok Demo - phunnysunny</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page-shell demo-page">
+      <nav class="nav demo-nav" aria-label="Primary">
+        <a class="brand" href="/" aria-label="phunnysunny home">phunnysunny</a>
+        <div class="nav-links">
+          <a href="/tos">Terms</a>
+          <a href="/privacy">Privacy</a>
+        </div>
+      </nav>
+
+      <section class="demo-hero">
+        <div class="demo-copy">
+          <p class="kicker">TikTok developer review demo</p>
+          <h1>Connect TikTok, review a slideshow, publish through the Content Posting API.</h1>
+          <p class="hero-text">This page shows the complete website flow for Login Kit, <code>user.info.basic</code>, Content Posting API, and <code>video.publish</code>. Use it for the review screen recording.</p>
+          <div class="demo-actions">
+            <button class="button button-dark" id="connectTikTok" type="button">Connect TikTok</button>
+            <a class="button button-ghost" href="/tos">Terms</a>
+            <a class="button button-ghost" href="/privacy">Privacy</a>
+          </div>
+        </div>
+
+        <aside class="demo-panel" aria-label="TikTok connection status">
+          <div class="demo-panel-head">
+            <span>TikTok account</span>
+            <strong id="connectionStatus">Not connected</strong>
+          </div>
+          <div class="scope-list" aria-label="Requested scopes">
+            <div>
+              <span>Login Kit</span>
+              <strong>OAuth authorization</strong>
+            </div>
+            <div>
+              <span>Scope</span>
+              <strong>user.info.basic</strong>
+            </div>
+            <div>
+              <span>Content Posting API</span>
+              <strong>Direct video publish</strong>
+            </div>
+            <div>
+              <span>Scope</span>
+              <strong>video.publish</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="demo-flow" aria-label="Posting workflow">
+        <article class="demo-step is-active" id="stepConnect">
+          <span>01</span>
+          <h2>Connect TikTok</h2>
+          <p>The user clicks Connect TikTok and is sent to TikTok OAuth. TikTok asks for the selected scopes, then redirects back to this site.</p>
+          <div class="oauth-card">
+            <strong>TikTok OAuth request</strong>
+            <code>response_type=code</code>
+            <code>scope=user.info.basic,video.publish</code>
+            <code>redirect_uri=https://phunnysunny.com/tiktok-demo</code>
+          </div>
+        </article>
+
+        <article class="demo-step" id="stepAccount">
+          <span>02</span>
+          <h2>Confirm account</h2>
+          <p>After OAuth, PhunnySunny uses <code>user.info.basic</code> to show which TikTok account is connected before any post is created.</p>
+          <div class="account-card">
+            <div class="avatar">PS</div>
+            <div>
+              <strong id="connectedUser">Waiting for connection</strong>
+              <small id="accountDetail">No TikTok account connected yet.</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="demo-step" id="stepVideo">
+          <span>03</span>
+          <h2>Review video and caption</h2>
+          <p>The user reviews the generated slideshow video, caption, privacy level, and AI-generated content disclosure before publishing.</p>
+          <div class="post-preview">
+            <div class="phone-video">
+              <video controls playsinline poster="/assets/tiktok-demo-cover.svg">
+                <source src="/assets/tiktok-demo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="post-fields">
+              <label>
+                Video file
+                <input value="final_with_silent_audio.mp4" readonly>
+              </label>
+              <label>
+                Caption
+                <textarea readonly>Discipline is overrated. Systems win because they still work when you are tired. Save this before you forget it.
+
+#productivity #systems #lazyproductivity #tiktokslideshow #selfimprovement</textarea>
+              </label>
+              <label>
+                Privacy level
+                <input value="SELF_ONLY for sandbox review" readonly>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" checked disabled>
+                AI-generated content disclosed
+              </label>
+            </div>
+          </div>
+        </article>
+
+        <article class="demo-step" id="stepPublish">
+          <span>04</span>
+          <h2>Publish request</h2>
+          <p>When the user clicks publish, the app uses <code>video.publish</code> and sends the video to TikTok's Content Posting API.</p>
+          <button class="button button-light" id="publishTikTok" type="button" disabled>Publish to TikTok sandbox</button>
+          <pre class="api-output" id="apiOutput">Waiting for user connection...</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="/tiktok-demo.js"></script>
+  </body>
+</html>

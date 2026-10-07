@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="PhunnySunny app icon">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="104" x2="904" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff7dd"/>
+      <stop offset="0.48" stop-color="#f9ce4a"/>
+      <stop offset="1" stop-color="#ec5b3f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#57320f" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <circle cx="256" cy="178" r="84" fill="#84d6b4" opacity="0.9"/>
+  <circle cx="824" cy="778" r="118" fill="#3d77c4" opacity="0.18"/>
+  <g filter="url(#shadow)">
+    <circle cx="512" cy="512" r="278" fill="#12110f"/>
+    <path d="M512 130v98M512 796v98M130 512h98M796 512h98M242 242l70 70M712 712l70 70M782 242l-70 70M312 712l-70 70" fill="none" stroke="#12110f" stroke-width="58" stroke-linecap="round"/>
+    <circle cx="512" cy="512" r="206" fill="#f9ce4a"/>
+    <path d="M358 390c46-74 132-112 220-94 96 20 155 100 141 203-61-84-151-112-255-93-43 8-77 7-106-16z" fill="#fff7dd" opacity="0.92"/>
+    <circle cx="432" cy="484" r="34" fill="#12110f"/>
+    <circle cx="592" cy="484" r="34" fill="#12110f"/>
+    <path d="M412 596c56 62 144 62 200 0" fill="none" stroke="#12110f" stroke-width="42" stroke-linecap="round"/>
+  </g>
+  <path d="M256 844c126 58 342 74 510-41" fill="none" stroke="#fff7dd" stroke-width="18" stroke-linecap="round" opacity="0.34"/>
+</svg>
