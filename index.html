@@ -3,35 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Playful apps, agent systems, browser experiments, and public projects by phunnysunny.">
-    <meta name="theme-color" content="#f3f2eb" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#171813" media="(prefers-color-scheme: dark)">
-    <meta property="og:title" content="phunnysunny | Playful tools for the internet">
-    <meta property="og:description" content="Small tools, public experiments, and shipped proofs of work.">
+    <meta name="description" content="phunnysunny builds AI-made video channels and the creator tools behind them, plus apps, agent systems, and browser experiments.">
+    <meta name="theme-color" content="#f7f4fc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#110c1b" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="phunnysunny | AI creator tools, built in public">
+    <meta property="og:description" content="AI-made video channels and the tools behind them: planning, scripts, rendering, and publishing.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/home/pet-zoo-park.jpg">
+    <meta property="og:image" content="/assets/home/tiktok-tool.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <title>phunnysunny | Playful tools for the internet</title>
+    <title>phunnysunny | AI creator tools, built in public</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="assets/home/reel-agent-checkout.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="home.css">
   </head>
   <body class="home-page">
-    <a class="skip-link" href="#projects">Skip to projects</a>
+    <a class="skip-link" href="#creator">Skip to creator tools</a>
     <header class="home-header">
       <nav class="nav" aria-label="Primary">
         <a class="brand" href="#top" aria-label="phunnysunny home">phunnysunny</a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
         <div class="nav-links" id="primary-links">
-          <a href="#real-ones">Real Ones</a>
-          <a href="https://skills.phunnysunny.com/">Skills</a>
+          <a href="#creator">Tools</a>
+          <a href="#reels">Reels</a>
+          <a href="#real-ones">Shipped</a>
           <a href="#projects">Projects</a>
-          <a href="#vibe">Vibe</a>
-          <a href="/tiktok">TikTok Tool</a>
-          <a href="/postshort">Postshort</a>
+          <a href="https://skills.phunnysunny.com/">Skills</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -40,17 +38,77 @@
     <main class="page-shell">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <h1>Playful tools for people and the internet.</h1>
-          <p class="hero-text">iPhone apps, agent systems, browser experiments, and small products that earn their place.</p>
+          <h1>AI creator tools, built in public.</h1>
+          <p class="hero-text">I build AI-made video channels and the tools behind them: planning, scripts, rendering, and publishing.</p>
           <div class="hero-actions">
-            <a class="button button-light" href="#projects">Browse projects</a>
-            <a class="button button-dark" href="https://github.com/atishaycn">GitHub</a>
+            <a class="button button-primary" href="#creator">See the tools <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+            <a class="button button-quiet" href="https://github.com/atishaycn"><i class="ph ph-github-logo" aria-hidden="true"></i> GitHub</a>
           </div>
         </div>
-        <figure class="hero-art" aria-label="Real Ones and Pet Zoo project previews">
-          <img class="hero-phone" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/99/7d/20/997d20ed-9599-851f-f4da-0978029a5b63/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.58.png/600x1300bb.webp" alt="Real Ones friend detail screen" width="600" height="1300">
-          <img class="hero-landscape" src="assets/home/pet-zoo-park.jpg" alt="Codex pets together in the Pet Zoo park" width="1672" height="941">
+        <figure class="hero-art" aria-label="Frames from reels made with the phunnysunny tools">
+          <img class="hero-reel hero-reel-back" src="assets/home/reel-hooks.jpg" alt="Reel frame ranking 27 hook ideas by score" width="540" height="960">
+          <img class="hero-reel hero-reel-front" src="assets/home/reel-agent-checkout.jpg" alt="Reel frame listing 13 tasks an agent left waiting for approval" width="540" height="960">
+          <img class="hero-reel hero-reel-side" src="assets/home/reel-real-tasks.jpg" alt="Reel frame showing agent tasks that hit a wall" width="540" height="960">
         </figure>
+      </section>
+
+      <section class="creator-section" id="creator" aria-labelledby="creator-title">
+        <div class="section-head">
+          <p class="section-kicker">Creator tools</p>
+          <h2 id="creator-title">The creator stack.</h2>
+          <p>Tools I use every day to plan, make, and publish short-form video.</p>
+        </div>
+        <div class="bento">
+          <a class="tile tile-feature" href="/tiktok">
+            <div class="tile-copy">
+              <span class="tile-icon" aria-hidden="true"><i class="ph ph-tiktok-logo"></i></span>
+              <h3>TikTok Tool</h3>
+              <p>Connect a TikTok account, build a slideshow, preview the caption, and publish through the Content Posting API.</p>
+              <span class="tile-link">Open the tool <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+            </div>
+            <img class="tile-shot" src="assets/home/tiktok-tool.jpg" alt="The TikTok Tool connect screen with requested permissions" width="1180" height="560" loading="lazy">
+          </a>
+          <article class="tile tile-plum">
+            <span class="tile-icon" aria-hidden="true"><i class="ph ph-chart-line-up"></i></span>
+            <h3>Studio</h3>
+            <p>Analytics, planning, and recommendations for every channel in one place.</p>
+            <span class="tile-note"><i class="ph ph-lock-simple" aria-hidden="true"></i> Private dashboard</span>
+          </article>
+          <a class="tile tile-lavender" href="/postshort">
+            <span class="tile-icon" aria-hidden="true"><i class="ph ph-youtube-logo"></i></span>
+            <h3>Postshort</h3>
+            <p>Prepares videos and publishes them to my own YouTube and Instagram accounts.</p>
+            <span class="tile-link">How it works <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="tile tile-lilac" href="https://github.com/atishaycn/html-to-video-agent-studio">
+            <img class="tile-reel" src="assets/home/reel-limit-reset.jpg" alt="" width="540" height="960" loading="lazy">
+            <div class="tile-copy">
+              <span class="tile-icon" aria-hidden="true"><i class="ph ph-film-strip"></i></span>
+              <h3>HTML-to-Video Studio</h3>
+              <p>Agents write scenes in code, preview them live, and render short MP4s.</p>
+              <span class="tile-link">View on GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+            </div>
+          </a>
+          <a class="tile tile-orchid" href="https://github.com/atishaycn/creator-pipeline-factory">
+            <span class="tile-icon" aria-hidden="true"><i class="ph ph-sparkle"></i></span>
+            <h3>Creator Pipeline Factory</h3>
+            <p>Turns source notes into slideshow scripts, threads, and short-form packages.</p>
+            <span class="tile-link">View on GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="reels-section" id="reels" aria-labelledby="reels-title">
+        <div class="reels-head">
+          <h2 id="reels-title">Reels made with the stack.</h2>
+          <p>Short videos for the AI channel, rendered in code. Hooks get scored before anything posts.</p>
+        </div>
+        <div class="reel-row" tabindex="0" aria-label="Reel frames, scroll sideways for more">
+          <figure class="reel"><img src="assets/home/reel-hooks.jpg" alt="27 hook ideas ranked by score" width="540" height="960" loading="lazy"><figcaption>Which comment is actually funny?</figcaption></figure>
+          <figure class="reel"><img src="assets/home/reel-agent-checkout.jpg" alt="13 agent tasks waiting on approval" width="540" height="960" loading="lazy"><figcaption>13 tasks waited on me.</figcaption></figure>
+          <figure class="reel"><img src="assets/home/reel-limit-reset.jpg" alt="A 28-day calendar of shipping days" width="540" height="960" loading="lazy"><figcaption>Ship one thing, or ship a full reset.</figcaption></figure>
+          <figure class="reel"><img src="assets/home/reel-real-tasks.jpg" alt="Agent tasks that stopped at checkout or a phone call" width="540" height="960" loading="lazy"><figcaption>10 hit a wall.</figcaption></figure>
+        </div>
       </section>
 
       <section class="launch-showcase" id="real-ones" aria-labelledby="launch-title">
@@ -69,8 +127,8 @@
                 <a class="project-action" href="https://apps.apple.com/us/app/real-ones/id6754051466">Download Real Ones</a>
               </div>
               <div class="launch-media phone-strip" aria-label="Real Ones app screenshots">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen" width="600" height="1300">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen" width="600" height="1300">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/b2/43/53b24317-af5a-474c-1399-0a40611d3e62/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_20.59.46.png/600x1300bb.webp" alt="Real Ones friends screen" width="600" height="1300" loading="lazy">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/bd/0e/b3bd0e02-5807-5702-b025-72833c885ce0/resized_Simulator_Screenshot_-_iPhone_17_Pro_-_2025-10-17_at_21.00.02.png/600x1300bb.webp" alt="Real Ones reminder screen" width="600" height="1300" loading="lazy">
               </div>
             </article>
 
@@ -82,7 +140,7 @@
                 <div class="app-facts" aria-label="Skills details"><span>Skill cards</span><span>Install prompts</span><span>GitHub import</span><span>Public catalog</span></div>
                 <a class="project-action" href="https://skills.phunnysunny.com/">Browse Skills</a>
               </div>
-              <figure class="launch-media media-frame"><img src="assets/home/skills-marketplace.png" alt="The live Skills marketplace homepage" width="1440" height="1000"></figure>
+              <figure class="launch-media media-frame"><img src="assets/home/skills-marketplace.png" alt="The live Skills marketplace homepage" width="1440" height="1000" loading="lazy"></figure>
             </article>
 
             <article class="launch-feature" id="darkmodeeverywhere">
@@ -93,7 +151,7 @@
                 <div class="app-facts" aria-label="Dark Mode Everywhere details"><span>Chrome extension</span><span>Default-on dark mode</span><span>Per-site toggle</span><span>Public GitHub repo</span></div>
                 <a class="project-action" href="https://github.com/atishaycn/darkmodeeverywhere">Get the extension</a>
               </div>
-              <figure class="launch-media media-frame"><img src="assets/home/darkmode-repo.png" alt="Dark Mode Everywhere public GitHub repository" width="1440" height="1000"></figure>
+              <figure class="launch-media media-frame"><img src="assets/home/darkmode-repo.png" alt="Dark Mode Everywhere public GitHub repository" width="1440" height="1000" loading="lazy"></figure>
             </article>
 
             <article class="launch-feature" id="pet-zoo">
@@ -104,7 +162,7 @@
                 <div class="app-facts" aria-label="Pet Zoo details"><span>Codex pets</span><span>Shared park</span><span>Petdex packs</span><span>Share links</span></div>
                 <a class="project-action" href="https://petzoo.phunnysunny.com/">Visit Pet Zoo</a>
               </div>
-              <figure class="launch-media media-frame"><img src="assets/home/pet-zoo-park.jpg" alt="Pets gathered in the shared Pet Zoo park" width="1672" height="941"></figure>
+              <figure class="launch-media media-frame"><img src="assets/home/pet-zoo-park.jpg" alt="Pets gathered in the shared Pet Zoo park" width="1672" height="941" loading="lazy"></figure>
             </article>
 
             <article class="launch-feature" id="bug-blaster">
@@ -115,39 +173,36 @@
                 <div class="app-facts" aria-label="Bug Blaster details"><span>Canvas arcade</span><span>Auto-shooting</span><span>Boss bugs</span><span>Top-10 scores</span></div>
                 <a class="project-action" href="https://game.phunnysunny.com/">Play Bug Blaster</a>
               </div>
-              <figure class="launch-media media-frame"><img src="assets/home/bug-blaster.png" alt="Bug Blaster game running in the browser" width="1440" height="900"></figure>
+              <figure class="launch-media media-frame"><img src="assets/home/bug-blaster.png" alt="Bug Blaster game running in the browser" width="1440" height="900" loading="lazy"></figure>
             </article>
           </div>
         </div>
         <div class="carousel-controls" aria-label="Launched project controls">
-          <button class="carousel-button carousel-prev" type="button" aria-label="Previous project">Previous</button>
+          <button class="carousel-button carousel-prev" type="button" aria-label="Previous project"><i class="ph ph-caret-left" aria-hidden="true"></i></button>
           <p class="carousel-status" aria-live="off">1 of 5</p>
           <button class="carousel-button carousel-toggle" type="button" aria-pressed="false">Pause</button>
-          <button class="carousel-button carousel-next" type="button" aria-label="Next project">Next</button>
+          <button class="carousel-button carousel-next" type="button" aria-label="Next project"><i class="ph ph-caret-right" aria-hidden="true"></i></button>
         </div>
       </section>
 
       <section class="project-section" id="projects" aria-labelledby="projects-title">
         <div class="section-head">
           <h2 id="projects-title">Ongoing experiments.</h2>
-          <p>A tighter edit of camera tools, local utilities, and agent systems with enough shape to share.</p>
+          <p>Camera tools, local utilities, and agent systems with enough shape to share.</p>
         </div>
         <div class="project-grid">
-          <a class="project-card project-lead" data-project="55cam" data-icon="55" href="https://github.com/atishaycn/55cam"><strong>55cam</strong><span>A minimal iPhone camera app for one-tap disposable-style photos.</span><em>Open repository</em></a>
-          <a class="project-card" data-project="agent-content-pipeline" data-icon="AP" href="https://github.com/atishaycn/agent-content-pipeline"><strong>agent-content-pipeline</strong><span>Turns agent work into structured content outputs.</span><em>Open repository</em></a>
+          <a class="project-card project-lead" data-project="agent-content-pipeline" data-icon="AP" href="https://github.com/atishaycn/agent-content-pipeline"><strong>agent-content-pipeline</strong><span>Scans X for agent talk, researches it, and drafts LinkedIn posts with an advisor review.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="55cam" data-icon="55" href="https://github.com/atishaycn/55cam"><strong>55cam</strong><span>A minimal iPhone camera app for one-tap disposable-style photos.</span><em>Open repository</em></a>
           <article class="project-card project-local" data-project="localx" data-icon="X"><strong>localx</strong><span>A macOS utility for reading X timelines through a local Chrome session.</span><em>Local project</em></article>
-          <a class="project-card project-wide" data-project="findFriends" data-icon="FF" href="https://github.com/atishaycn/findFriends"><strong>findFriends</strong><span>A friend graph app for mapping people and relationships.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="persistent-ops-thread" data-icon="OT" href="https://github.com/atishaycn/persistent-ops-thread"><strong>persistent-ops-thread</strong><span>An AI chief-of-staff product for durable operations and approvals.</span><em>Open repository</em></a>
           <a class="project-card" data-project="agent-guardrails-runner" data-icon="GR" href="https://github.com/atishaycn/agent-guardrails-runner"><strong>agent-guardrails-runner</strong><span>A local CLI that enforces completion guardrails around agent runs.</span><em>Open repository</em></a>
-          <a class="project-card" data-project="html-to-video-agent-studio" data-icon="HV" href="https://github.com/atishaycn/html-to-video-agent-studio"><strong>html-to-video-agent-studio</strong><span>Previews and renders HTML-to-video templates locally.</span><em>Open repository</em></a>
+          <a class="project-card" data-project="findFriends" data-icon="FF" href="https://github.com/atishaycn/findFriends"><strong>findFriends</strong><span>A friend graph app for mapping people and relationships.</span><em>Open repository</em></a>
           <article class="project-card project-local" data-project="paperclip" data-icon="PC"><strong>paperclip</strong><span>A local-first macOS assistant shell with Pi auth and a Codex pet surface.</span><em>Local project</em></article>
-          <a class="project-card project-wide" data-project="persistent-ops-thread" data-icon="OT" href="https://github.com/atishaycn/persistent-ops-thread"><strong>persistent-ops-thread</strong><span>An AI chief-of-staff product for durable operations and approvals.</span><em>Open repository</em></a>
           <a class="project-card" data-project="mostcam" data-icon="MC" href="https://github.com/atishaycn/mostcam"><strong>mostcam</strong><span>An iOS camera app tuned for disposable-camera-style snapshots.</span><em>Open repository</em></a>
-          <a class="project-card" data-project="creator-pipeline-factory" data-icon="CP" href="https://github.com/atishaycn/creator-pipeline-factory"><strong>creator-pipeline-factory</strong><span>A factory for assembling creator content workflows.</span><em>Open repository</em></a>
-          <a class="project-card" data-project="postshort" data-icon="PS" href="/postshort"><strong>Postshort</strong><span>A private desktop tool for preparing and publishing videos to the operator's YouTube and Instagram accounts.</span><em>Read about the tool</em></a>
         </div>
 
         <div class="project-archive" aria-labelledby="archive-title">
-          <div class="archive-intro"><h3 id="archive-title">Browse more projects.</h3><p>Explore the wider folder by category without making every experiment compete for attention.</p></div>
+          <h3 id="archive-title">Browse more projects.</h3>
           <div class="archive-groups">
             <details><summary>Capture labs</summary><p>55cam, amazingcam, bestcam, cursorcam, mostcam</p><a href="https://github.com/atishaycn/amazingcam">Open amazingcam</a></details>
             <details><summary>People tools</summary><p>findFriends, friendgraphapp, pullBirthdays</p><a href="https://github.com/atishaycn/pull-facebook-birthdays">Open birthday utility</a></details>
@@ -158,18 +213,20 @@
       </section>
 
       <section class="about-section" id="vibe" aria-labelledby="vibe-title">
-        <div class="about-copy">
-          <h2 id="vibe-title">Small starts. Working surfaces.</h2>
-          <p>I like turning loose ideas into useful apps, public repositories, and playful browser experiments. The best ones become products people can actually open.</p>
+        <h2 id="vibe-title">Small starts. Working surfaces.</h2>
+        <div class="about-body">
+          <p>I'm growing short-form channels in public and building the tools as I go. The best experiments become products people can actually open.</p>
           <p>Curious collaborators, practical prototypes, and strange little tools are welcome.</p>
-          <a class="text-link" href="#contact">Contact</a>
+          <a class="text-link" href="https://x.com/phunnysunny"><i class="ph ph-x-logo" aria-hidden="true"></i> Follow along on X</a>
         </div>
-        <figure class="about-media"><img src="assets/home/skills-marketplace.png" alt="A shipped project open in the browser" width="1440" height="1000"></figure>
       </section>
     </main>
 
     <footer class="footer" id="contact">
-      <div><h2>Keep the tab sunny.</h2><p>Small tools, public experiments, and shipped proofs of work.</p></div>
+      <div class="footer-intro">
+        <h2>Keep the tab sunny.</h2>
+        <p>Small tools, public experiments, and shipped proofs of work.</p>
+      </div>
       <div class="footer-links">
         <a href="https://github.com/atishaycn">GitHub</a>
         <a href="https://x.com/phunnysunny">X</a>
@@ -178,7 +235,6 @@
         <a href="/tos">Terms</a>
         <a href="/privacy">Privacy</a>
         <a href="/data-deletion">Data Deletion</a>
-        <a href="#top">Back to top</a>
       </div>
     </footer>
 

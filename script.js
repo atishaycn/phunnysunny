@@ -172,7 +172,7 @@
       ease: "power3.out"
     });
 
-    window.gsap.from(".hero-copy > *, .hero-art > *", {
+    window.gsap.from(".hero-copy > *, .hero-art", {
       y: 28,
       opacity: 0,
       duration: .8,
@@ -181,10 +181,21 @@
       clearProps: "transform,opacity"
     });
 
-    [".project-grid", ".project-archive", ".about-section"].forEach((selector) => {
+    // Reels keep their CSS rotation, so only fade them in.
+    window.gsap.from(".hero-reel", {
+      opacity: 0,
+      duration: .9,
+      delay: .25,
+      stagger: .12,
+      ease: "power2.out",
+      clearProps: "opacity"
+    });
+
+    [".bento", ".reel-row", ".project-grid", ".project-archive", ".about-section"].forEach((selector) => {
       const group = document.querySelector(selector);
       if (!group) return;
-      const children = selector === ".project-grid" ? group.children : [group];
+      const staggered = [".bento", ".reel-row", ".project-grid"].includes(selector);
+      const children = staggered ? group.children : [group];
       window.gsap.from(children, {
         y: 24,
         opacity: 0,
