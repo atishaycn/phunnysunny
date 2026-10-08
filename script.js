@@ -51,6 +51,16 @@
     if (section) sectionObserver.observe(section);
   });
 
+  /* Reel strip pause control (WCAG 2.2.2: moving content can be paused) */
+  const marquee = document.querySelector(".marquee");
+  const marqueeToggle = document.querySelector(".marquee-toggle");
+  marqueeToggle?.addEventListener("click", () => {
+    const paused = marquee?.classList.toggle("is-paused") ?? false;
+    marqueeToggle.setAttribute("aria-pressed", String(paused));
+    marqueeToggle.setAttribute("aria-label", paused ? "Play the reel strip" : "Pause the reel strip");
+    marqueeToggle.querySelector(".ph")?.classList.replace(paused ? "ph-pause" : "ph-play", paused ? "ph-play" : "ph-pause");
+  });
+
   /* Shipped carousel */
   const showcase = document.querySelector(".shipped");
   const viewport = showcase?.querySelector(".launch-viewport");
@@ -184,8 +194,6 @@
       play(card, [{ opacity: 0, transform: "translateY(28px) scale(.97)" }, { opacity: 1, transform: "none" }], { duration: 650, delay: index * 60 })),
     track: (group) =>
       play(group, [{ opacity: 0, transform: "translateX(72px)" }, { opacity: 1, transform: "none" }], { duration: 750 }),
-    sentences: (group) => Array.from(group.children).forEach((sentence, index) =>
-      play(sentence, [{ opacity: .15 }, { opacity: 1 }], { duration: 700, delay: index * 100, easing: "ease-out" })),
     mark: (group) =>
       play(group, [{ transform: "translateY(40%)" }, { transform: "none" }], { duration: 800 }),
   };
