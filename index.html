@@ -68,63 +68,61 @@
       </div>
 
       <section class="creator" id="creator" aria-labelledby="creator-title">
-        <div class="section-head">
-          <h2 id="creator-title">The creator stack.</h2>
-          <p>Tools I use every day to plan, make, and publish short-form video.</p>
+        <div class="rail-head">
+          <div>
+            <h2 id="creator-title">The creator stack.</h2>
+            <p>Tools I use every day to plan, make, and publish short-form video.</p>
+          </div>
+          <div class="rail-controls">
+            <button class="rail-button rail-prev" type="button" aria-label="Previous tool" disabled><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+            <button class="rail-button rail-next" type="button" aria-label="Next tool"><i class="ph ph-caret-right" aria-hidden="true"></i></button>
+          </div>
         </div>
-        <div class="bento" data-reveal="cards">
-          <a class="card card-tiktok" href="/tiktok">
-            <div class="card-copy">
-              <span class="card-icon" aria-hidden="true"><i class="ph ph-tiktok-logo"></i></span>
-              <h3>TikTok Tool</h3>
-              <p>Connect a TikTok account, build a slideshow, preview the caption, and publish through the Content Posting API.</p>
-              <span class="card-link">Open the tool <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+        <ul class="rail" data-reveal="rail">
+          <li>
+            <a class="tool" href="/tiktok">
+              <span class="tool-name">TikTok Tool</span>
+              <span class="tool-line">Connect, caption, and publish.</span>
+              <img class="tool-shot tool-shot-wide" src="assets/home/tiktok-connect.jpg" alt="The TikTok Tool asking to connect an account, with the permissions it requests" width="1000" height="800" loading="lazy">
+              <span class="tool-go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+          </li>
+          <li>
+            <div class="tool tool-accent">
+              <span class="tool-name">Studio <i class="ph ph-lock-simple" aria-hidden="true"></i><span class="visually-hidden">(private)</span></span>
+              <span class="tool-line">Every channel on one screen.</span>
+              <div class="tool-logos" role="group" aria-label="Channels in Studio">
+                <span class="logo logo-youtube" role="img" aria-label="YouTube"></span>
+                <span class="logo logo-instagram" role="img" aria-label="Instagram"></span>
+                <span class="logo logo-x" role="img" aria-label="X"></span>
+              </div>
             </div>
-            <div class="card-media"><img src="assets/home/tiktok-tool.jpg" alt="The TikTok Tool connect screen with the requested permissions" width="1180" height="560" loading="lazy"></div>
-          </a>
-          <article class="card card-accent card-studio">
-            <div class="platforms" aria-label="Channels Studio tracks">
-              <span class="logo logo-tiktok" role="img" aria-label="TikTok"></span>
-              <span class="logo logo-youtube" role="img" aria-label="YouTube"></span>
-              <span class="logo logo-instagram" role="img" aria-label="Instagram"></span>
-              <span class="logo logo-x" role="img" aria-label="X"></span>
-            </div>
-            <div class="card-copy">
-              <h3>Studio</h3>
-              <p>Analytics, planning, and recommendations for every channel in one place.</p>
-              <span class="card-note"><i class="ph ph-lock-simple" aria-hidden="true"></i> Private dashboard</span>
-            </div>
-          </article>
-          <a class="card card-video" href="https://github.com/atishaycn/html-to-video-agent-studio">
-            <div class="card-media"><img src="assets/home/video-studio.jpg" alt="HTML-to-Video Studio with the Launch Pulse template selected" width="700" height="917" loading="lazy"></div>
-            <div class="card-copy">
-              <span class="card-icon" aria-hidden="true"><i class="ph ph-film-strip"></i></span>
-              <h3>HTML-to-Video Studio</h3>
-              <p>Agents write scenes in code, preview them live, and render short MP4s.</p>
-              <span class="card-link">View on GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
-            </div>
-          </a>
-          <a class="card card-pipeline" href="https://github.com/atishaycn/creator-pipeline-factory">
-            <div class="card-media"><img src="assets/home/pipeline-package.jpg" alt="A generated package with a source note, a three-act plan, and pipeline stages" width="900" height="792" loading="lazy"></div>
-            <div class="card-copy">
-              <span class="card-icon" aria-hidden="true"><i class="ph ph-flow-arrow"></i></span>
-              <h3>Creator Pipeline Factory</h3>
-              <p>Turns source notes into slideshow scripts, threads, and short-form packages.</p>
-              <span class="card-link">View on GitHub <i class="ph ph-arrow-up-right" aria-hidden="true"></i></span>
-            </div>
-          </a>
-          <a class="card card-postshort" href="/postshort">
-            <div class="card-logos" aria-hidden="true">
-              <span class="logo logo-youtube"></span>
-              <span class="logo logo-instagram"></span>
-            </div>
-            <div class="card-copy">
-              <h3>Postshort</h3>
-              <p>Prepares videos and publishes them to my own YouTube and Instagram accounts.</p>
-              <span class="card-link">How it works <i class="ph ph-arrow-right" aria-hidden="true"></i></span>
-            </div>
-          </a>
-        </div>
+          </li>
+          <li>
+            <a class="tool" href="/postshort">
+              <span class="tool-name">Postshort</span>
+              <span class="tool-line">Post once to YouTube and Instagram.</span>
+              <div class="tool-phone"><img src="assets/home/strip/reel-03.jpg" alt="A reel that reads Comments in. Jokes out." width="360" height="640" loading="lazy"></div>
+              <span class="tool-go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+          </li>
+          <li>
+            <a class="tool" href="https://github.com/atishaycn/html-to-video-agent-studio">
+              <span class="tool-name">HTML-to-Video Studio</span>
+              <span class="tool-line">Scenes in code, rendered to video.</span>
+              <img class="tool-shot" src="assets/home/video-studio.jpg" alt="HTML-to-Video Studio with the Launch Pulse template selected" width="700" height="917" loading="lazy">
+              <span class="tool-go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+          </li>
+          <li>
+            <a class="tool" href="https://github.com/atishaycn/creator-pipeline-factory">
+              <span class="tool-name">Creator Pipeline Factory</span>
+              <span class="tool-line">One note in. Scripts and threads out.</span>
+              <img class="tool-shot" src="assets/home/pipeline-package.jpg" alt="A generated package with a source note, a three-act plan, and pipeline stages" width="900" height="792" loading="lazy">
+              <span class="tool-go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section class="reels" id="reels" aria-labelledby="reels-title">
@@ -237,19 +235,16 @@
 
       <section class="about" id="vibe" aria-labelledby="vibe-title">
         <h2 id="vibe-title">How I work.</h2>
-        <ol class="steps" data-reveal="cards">
+        <ol class="steps">
           <li class="step">
-            <span class="step-icon" aria-hidden="true"><i class="ph ph-hand"></i></span>
             <h3>Start with my own work.</h3>
             <p>Every tool begins as a manual job on my own accounts.</p>
           </li>
           <li class="step">
-            <span class="step-icon" aria-hidden="true"><i class="ph ph-code"></i></span>
             <h3>Build it with agents.</h3>
             <p>Claude Code writes, tests, and runs the first version.</p>
           </li>
           <li class="step">
-            <span class="step-icon" aria-hidden="true"><i class="ph ph-paper-plane-tilt"></i></span>
             <h3>Ship what holds up.</h3>
             <p>Tools I use every day become products other people can open.</p>
           </li>

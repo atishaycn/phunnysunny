@@ -51,6 +51,24 @@
     if (section) sectionObserver.observe(section);
   });
 
+  /* Creator rail: arrow buttons scroll one card; each disables at its end */
+  const rail = document.querySelector(".rail");
+  const railPrev = document.querySelector(".rail-prev");
+  const railNext = document.querySelector(".rail-next");
+  if (rail && railPrev && railNext) {
+    const step = () => (rail.firstElementChild?.getBoundingClientRect().width ?? 320) + 20;
+    railPrev.addEventListener("click", () => rail.scrollBy({ left: -step(), behavior: reducedMotion.matches ? "auto" : "smooth" }));
+    railNext.addEventListener("click", () => rail.scrollBy({ left: step(), behavior: reducedMotion.matches ? "auto" : "smooth" }));
+    const edgeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const button = entry.target === rail.firstElementChild ? railPrev : railNext;
+        button.disabled = entry.isIntersecting;
+      });
+    }, { root: rail, threshold: .95 });
+    edgeObserver.observe(rail.firstElementChild);
+    edgeObserver.observe(rail.lastElementChild);
+  }
+
   /* Reel strip pause control (WCAG 2.2.2: moving content can be paused) */
   const marquee = document.querySelector(".marquee");
   const marqueeToggle = document.querySelector(".marquee-toggle");
@@ -190,8 +208,8 @@
   };
 
   const reveals = {
-    cards: (group) => Array.from(group.children).forEach((card, index) =>
-      play(card, [{ opacity: 0, transform: "translateY(28px) scale(.97)" }, { opacity: 1, transform: "none" }], { duration: 650, delay: index * 60 })),
+    rail: (group) => Array.from(group.children).slice(0, 4).forEach((card, index) =>
+      play(card, [{ opacity: 0, transform: "translateX(64px)" }, { opacity: 1, transform: "none" }], { duration: 700, delay: index * 60 })),
     track: (group) =>
       play(group, [{ opacity: 0, transform: "translateX(72px)" }, { opacity: 1, transform: "none" }], { duration: 750 }),
     mark: (group) =>

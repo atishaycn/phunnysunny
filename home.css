@@ -11,7 +11,8 @@
 }
 
 /*
-  Palette: the 12 TasteCode roles, one violet hue. Every text role passes 4.5:1 and
+  Palette: the 12 TasteCode roles. Surfaces are near-neutral (Apple-style) so imagery
+  carries color; violet is reserved for actions, focus, frames, and the one accent card. Every text role passes 4.5:1 and
   every control/focus role passes 3:1 on canvas, surface, and surface-alt in both themes.
   Radius scale: controls and nav are pills, cards 28px, media inside cards 16px,
   chips 10px, reel frames 26px.
@@ -19,13 +20,13 @@
 */
 .home-page {
   color-scheme: light dark;
-  --canvas: #f8f6fc;
-  --surface: #efeaf8;
-  --surface-alt: #e4dcf5;
-  --text: #1c1530;
-  --text-muted: #574d6c;
-  --divider: #ddd5ec;
-  --control-border: #776b92;
+  --canvas: #fbfbfd;
+  --surface: #f3f2f7;
+  --surface-alt: #e9e7ef;
+  --text: #1d1a24;
+  --text-muted: #575264;
+  --divider: #e2dfe8;
+  --control-border: #837d92;
   --accent: #5b37b8;
   --accent-hover: #4a2a9c;
   --on-accent: #fbf9ff;
@@ -54,13 +55,13 @@
 
 @media (prefers-color-scheme: dark) {
   .home-page {
-    --canvas: #110d1a;
-    --surface: #1a1427;
-    --surface-alt: #241b37;
-    --text: #f1ecfa;
-    --text-muted: #b6abcb;
-    --divider: #2f2643;
-    --control-border: #7d7096;
+    --canvas: #0b0a0f;
+    --surface: #17151d;
+    --surface-alt: #211e29;
+    --text: #f5f4f8;
+    --text-muted: #a9a4b5;
+    --divider: #2a2633;
+    --control-border: #7a7488;
     --accent: #b39cf5;
     --accent-hover: #c6b4f8;
     --on-accent: #160f24;
@@ -112,6 +113,15 @@
   outline-offset: 3px;
 }
 
+.home-page .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .home-page .skip-link {
   position: absolute;
   left: 1rem;
@@ -138,10 +148,10 @@
 }
 
 .home-page h2 {
-  font-size: clamp(2.3rem, 4.6vw, 3.75rem);
-  font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -.03em;
+  font-size: clamp(2.2rem, 4.2vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -.025em;
 }
 
 /* Buttons */
@@ -359,150 +369,199 @@
   transform: translateY(-2px);
 }
 
-/* Creator stack: bento with one base card and one accent variant */
+/* Creator stack: Apple-style rail of tall, image-first cards */
 .home-page .creator {
   padding-top: clamp(5rem, 10vw, 8.5rem);
 }
 
-.home-page .section-head {
+.home-page .rail-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.home-page .rail-head p {
   max-width: 40rem;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-}
-
-.home-page .section-head p {
-  max-width: 34rem;
-  margin-top: 1rem;
+  margin-top: .9rem;
   color: var(--text-muted);
-  font-size: 1.15rem;
-  line-height: 1.55;
+  font-size: 1.2rem;
+  line-height: 1.45;
 }
 
-.home-page .bento {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.home-page .card {
-  position: relative;
+.home-page .rail-controls {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  min-height: 22rem;
-  padding: clamp(1.4rem, 2.4vw, 2rem);
-  overflow: hidden;
-  border-radius: var(--radius-card);
-  background: var(--surface);
-  transition: transform .25s var(--ease-out), background-color .25s ease;
-}
-
-.home-page a.card:hover {
-  transform: translateY(-4px);
-  background: var(--surface-alt);
-}
-
-.home-page .card-copy {
-  display: flex;
-  flex-direction: column;
   gap: .6rem;
 }
 
-.home-page .card h3 {
-  font-size: clamp(1.3rem, 1.9vw, 1.55rem);
-  font-weight: 600;
-  letter-spacing: -.02em;
+.home-page .rail-button {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--surface-alt);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color .2s ease, opacity .2s ease, transform .2s var(--ease-out);
 }
 
-.home-page .card p {
-  max-width: 36ch;
-  color: var(--text-muted);
-  line-height: 1.5;
+.home-page .rail-button:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--surface-alt) 80%, var(--text));
 }
 
-.home-page .card-link,
-.home-page .card-note {
+.home-page .rail-button:active:not(:disabled) {
+  transform: scale(.95);
+}
+
+.home-page .rail-button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+
+.home-page .rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(17rem, 27vw, 23.5rem);
+  gap: 1.25rem;
+  /* Full-bleed like Apple's rails: content starts on the page column, scrolls to the viewport edge. */
+  --rail-inset: max(var(--gutter), calc((100vw - var(--content-max)) / 2));
+  width: 100vw;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: .5rem var(--rail-inset) 1.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--rail-inset);
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.home-page .rail::-webkit-scrollbar {
+  display: none;
+}
+
+.home-page .rail > li {
+  scroll-snap-align: start;
+}
+
+.home-page .tool {
+  position: relative;
+  height: clamp(30rem, 44vw, 36rem);
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.75rem 0;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.home-page .tool-name {
   display: inline-flex;
   align-items: center;
-  gap: .4rem;
-  margin-top: .35rem;
-  color: var(--accent-text);
-  font-weight: 500;
+  gap: .35rem;
+  color: var(--text-muted);
+  font-size: .95rem;
+  font-weight: 600;
 }
 
-.home-page .card-link .ph {
-  transition: transform .2s var(--ease-out);
+.home-page .tool-line {
+  max-width: 19ch;
+  margin-top: .5rem;
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  text-wrap: balance;
 }
 
-.home-page a.card:hover .card-link .ph {
-  transform: translateX(3px);
-}
-
-.home-page .card-media {
-  overflow: hidden;
-  border-radius: var(--radius-media);
-  background: var(--canvas);
-}
-
-.home-page .card-media img {
-  width: 100%;
-  height: 100%;
+.home-page .tool-shot {
+  width: 115%;
+  max-width: none;
+  height: 58%;
+  margin-top: auto;
   object-fit: cover;
   object-position: top left;
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 20px 50px -18px var(--shadow), 0 0 0 1px var(--divider);
   transition: transform .5s var(--ease-out);
 }
 
-.home-page a.card:hover .card-media img {
-  transform: scale(1.025);
+.home-page .tool-shot-wide {
+  width: 150%;
 }
 
-.home-page .card-tiktok {
-  grid-column: span 7;
-  padding-bottom: 0;
+.home-page .tool-phone {
+  width: 58%;
+  margin: auto auto 0;
+  overflow: hidden;
+  border: 6px solid var(--frame);
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  background: var(--frame);
+  aspect-ratio: 9 / 13;
+  transition: transform .5s var(--ease-out);
 }
 
-.home-page .card-tiktok .card-media {
-  margin-top: auto;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  box-shadow: 0 -12px 40px -28px var(--shadow);
+.home-page .tool-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
-.home-page .card-studio {
-  grid-column: span 5;
-  justify-content: space-between;
+.home-page a.tool:hover .tool-shot,
+.home-page a.tool:hover .tool-phone {
+  transform: translateY(-6px);
 }
 
-.home-page .card-accent {
+.home-page .tool-go {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
   color: var(--on-accent);
   background: var(--accent);
+  font-size: 1.05rem;
+  box-shadow: 0 6px 16px -6px var(--shadow);
+  transition: background-color .2s ease, transform .2s var(--ease-out);
 }
 
-.home-page .card-accent p,
-.home-page .card-accent .card-note {
-  color: color-mix(in srgb, var(--on-accent) 86%, var(--accent));
+.home-page a.tool:hover .tool-go {
+  background: var(--accent-hover);
+  transform: scale(1.06);
 }
 
-.home-page .card-video {
-  grid-column: span 4;
+/* Fixed deep violet in both themes so the one emphasized card reads the same everywhere. */
+.home-page .tool-accent {
+  color: #fbf9ff;
+  background:
+    radial-gradient(120% 90% at 100% 100%, #2e1d5c, transparent 70%),
+    #5b37b8;
 }
 
-.home-page .card-pipeline {
-  grid-column: span 5;
+.home-page .tool-accent .tool-name {
+  color: #ddd2fb;
 }
 
-.home-page .card-video .card-media,
-.home-page .card-pipeline .card-media {
-  height: 15rem;
-}
-
-.home-page .card-postshort {
-  grid-column: span 3;
-  justify-content: space-between;
-}
-
-.home-page .card-logos {
+.home-page .tool-logos {
   display: flex;
-  gap: .9rem;
+  gap: 1.75rem;
+  margin-top: auto;
+  padding-bottom: 2.25rem;
+}
+
+.home-page .tool-logos .logo {
+  width: 3.25rem;
+  height: 3.25rem;
+  background: #fbf9ff;
 }
 
 .home-page .logo {
@@ -525,35 +584,6 @@
 .home-page .logo-convex { --logo: url("/assets/icons/convex.svg"); }
 .home-page .logo-cloudflare { --logo: url("/assets/icons/cloudflare.svg"); }
 .home-page .logo-vercel { --logo: url("/assets/icons/vercel.svg"); }
-
-.home-page .card-icon {
-  width: 48px;
-  height: 48px;
-  display: inline-grid;
-  place-items: center;
-  margin-bottom: .4rem;
-  border-radius: 14px;
-  color: var(--accent-text);
-  background: var(--canvas);
-  font-size: 1.45rem;
-}
-
-.home-page .platforms {
-  display: grid;
-  grid-template-columns: repeat(2, 3.25rem);
-  gap: 1.1rem 1.4rem;
-  align-self: flex-end;
-}
-
-.home-page .card-accent .logo {
-  width: 3.25rem;
-  height: 3.25rem;
-  background: var(--on-accent);
-}
-
-.home-page .app-facts .ph {
-  color: var(--accent-text);
-}
 
 /* Reel strip: the page's one marquee */
 .home-page .reels {
@@ -803,7 +833,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* How I work: three ordered steps, stair-stepped */
+/* How I work: three ordered steps, stair-stepped, numbers set as type */
 .home-page .about {
   padding: clamp(5rem, 10vw, 8.5rem) 0 clamp(5rem, 9vw, 7rem);
 }
@@ -812,7 +842,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-top: clamp(2rem, 4vw, 3rem);
   padding: 0;
   list-style: none;
@@ -820,11 +850,10 @@
 }
 
 .home-page .step {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: .6rem;
-  padding: clamp(1.4rem, 2.4vw, 2rem);
+  padding: 1.75rem;
   border-radius: var(--radius-card);
   background: var(--surface);
   counter-increment: step;
@@ -835,41 +864,26 @@
 
 .home-page .step::before {
   content: counter(step);
-  position: absolute;
-  top: clamp(1.4rem, 2.4vw, 2rem);
-  right: clamp(1.4rem, 2.4vw, 2rem);
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  color: var(--on-accent);
-  background: var(--accent);
+  margin-bottom: 1.5rem;
+  color: var(--accent-text);
+  font-size: clamp(3.5rem, 6vw, 5rem);
   font-weight: 600;
+  line-height: .9;
+  letter-spacing: -.04em;
   font-variant-numeric: tabular-nums;
 }
 
-.home-page .step-icon {
-  width: 64px;
-  height: 64px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 1rem;
-  border-radius: 18px;
-  color: var(--accent-text);
-  background: var(--canvas);
-  font-size: 1.9rem;
-}
-
 .home-page .step h3 {
-  font-size: clamp(1.3rem, 1.9vw, 1.55rem);
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
   font-weight: 600;
+  line-height: 1.15;
   letter-spacing: -.02em;
 }
 
 .home-page .step p {
   max-width: 30ch;
   color: var(--text-muted);
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -942,25 +956,6 @@
   .home-page .nav-links a {
     padding: 0 .7rem;
   }
-
-  .home-page .card-tiktok,
-  .home-page .card-studio {
-    grid-column: span 12;
-  }
-
-  .home-page .card-studio {
-    min-height: 16rem;
-  }
-
-  .home-page .card-video,
-  .home-page .card-pipeline {
-    grid-column: span 6;
-  }
-
-  .home-page .card-postshort {
-    grid-column: span 12;
-    min-height: 0;
-  }
 }
 
 /* Phone */
@@ -1029,27 +1024,12 @@
     margin-top: 0;
   }
 
-  .home-page .card-video,
-  .home-page .card-pipeline {
-    grid-column: span 12;
+  .home-page .rail-controls {
+    display: none;
   }
 
-  .home-page .card {
-    min-height: 0;
-  }
-
-  .home-page .card-studio {
-    flex-direction: column-reverse;
-  }
-
-  .home-page .platforms {
-    grid-template-columns: repeat(4, 2.5rem);
-    align-self: flex-start;
-  }
-
-  .home-page .card-accent .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+  .home-page .rail {
+    grid-auto-columns: 80vw;
   }
 
   .home-page .steps {
