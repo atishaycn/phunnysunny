@@ -97,7 +97,7 @@
         source: "FILE_UPLOAD",
         video_file: "slideshow_output.mp4"
       },
-      result: "Sandbox submission prepared"
+      result: "Sandbox only. Not sent to TikTok."
     }, null, 2);
   }
 

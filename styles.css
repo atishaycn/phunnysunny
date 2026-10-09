@@ -3035,6 +3035,24 @@ h1 {
 }
 
 /* Posted */
+.tk-beta-badge {
+  margin-right: auto;
+  margin-left: 10px;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tk-beta-note {
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  border: 1px solid var(--tk-line);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
 .tk-success-msg {
   color: var(--tk-success);
   font-weight: 600;

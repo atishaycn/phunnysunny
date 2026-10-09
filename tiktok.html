@@ -20,6 +20,7 @@
             <span class="tk-brand-icon">PS</span>
             <span class="tk-brand-text">phunnysunny</span>
           </a>
+          <span class="tk-beta-badge">Beta</span>
           <nav class="tk-nav" aria-label="Legal links">
             <a href="/privacy">Privacy</a>
             <a href="/tos">Terms</a>
@@ -78,6 +79,7 @@
 
         <!-- Main content area -->
         <section class="tk-main">
+          <p class="tk-beta-note">TikTok posting is in beta. This page runs in sandbox mode and posts nothing. To join the waitlist, email <a href="mailto:connect@phunnysunny.com">connect@phunnysunny.com</a>.</p>
           <!-- View: connect -->
           <div class="tk-view tk-view-connect" id="tkViewConnect">
             <div class="tk-view-head">
@@ -195,12 +197,12 @@
           <!-- View: posted -->
           <div class="tk-view tk-view-posted tk-hidden" id="tkViewPosted">
             <div class="tk-view-head">
-              <h2>Post submitted</h2>
-              <p class="tk-success-msg">Your video has been prepared for TikTok's Content Posting API sandbox flow.</p>
+              <h2>Sandbox preview ready</h2>
+              <p class="tk-success-msg">Nothing was posted. This is the request the tool will send to TikTok when posting leaves beta.</p>
             </div>
 
             <div class="tk-api-response">
-              <h3>API response</h3>
+              <h3>Request preview</h3>
               <pre id="tkApiOutput">{}</pre>
             </div>
 
